@@ -12,71 +12,97 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam&family=Jost:wght@400;600&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam&family=Jost:wght@400;600&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <header>
-    <a href="#top" class="hyperlink">Scroll to Top →</a>
     <nav>
         <ul>
-            <li><a href="#projects" class="hyperlink">Selected Projects</a></li>
-            <li><a href="#about" class="hyperlink">About Me</a></li>
+            <li><a href="#top" class="hyperlink">Top</a></li>
+            <li><a href="#projects" class="hyperlink">Projects</a></li>
+            <li><a href="#about" class="hyperlink">Résumé</a></li>
+            <li><span class="hyperlink">Dark Mode</span></li>
         </ul>
         <a href="/"><img src="images/logo.svg" alt="My Logo"></a>
     </nav>
 </header>
+
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <!--<section id="top">
+        <div>
+            <h2>Create. Simplify. Beautify</h2>
+            <h4>Made in Vietnam, since 1995</h4>
+            <br>
+            <br>
+            <br>
+            <span class="icon-dribbble"></span>
+            <span class="icon-linkedin"></span>
+            <span class="icon-xing"></span>
+            <span class="icon-mail"></span>
+        </div>
+    </section>-->
+
     <section id="top">
-        <h2>Create. Simplify. Beautify</h2>
-        <h4>© 2020 Thanh Nguyen</h4>
-        <span class="icon-dribbble"></span>
-        <span class="icon-linkedin"></span>
-        <span class="icon-xing"></span>
-        <span class="icon-mail"></span>
+        <img src="images/thanh-nguyen.jpg" alt="A Photo of Me">
+        <div>
+            <img src="images/logo.svg" alt="My Logo">
+            <br>
+            <h2>Chi Thanh Nguyen</h2>
+            <p>A multidisciplinary designer & developer based in Bremen, Germany.
+                Currently UI/UX Designer at <a href="https://www.aboutyou.de/" class="hyperlink">About You</a>.</p>
+
+        </div>
     </section>
-    
+
     <section id="projects">
         <h2>Selected Projects</h2>
         <h4>UI/UX & Graphic Design, Web Development</h4>
         <div>
-            <img src="images/cassiopeia_featured-image.jpg" alt="Cassiopeia Featured Image">
-            <h2>Cassiopeia</h2>
-            <h4>Multimodality Design & Development</h4>
-            <button>View Case Study →</button>
-        </div>
-        <div>
-            <img src="images/hashtag_featured-image.jpg" alt="Hashtag Inspector Featured Image">
-            <h2>Hashtag Inspector</h2>
-            <h4>Android App Design & Development</h4>
-            <button>View Case Study →</button>
-        </div>
-        <div>
-            <img src="images/gtr_featured-image.jpg" alt="GTR Featured Image">
-            <h2>Smaato Global Trends Report</h2>
-            <h4>Editorial Design</h4>
-            <button>View Demo →</button>
-        </div>
-        <div>
-            <img src="images/cxtt_featured-image.jpg" alt="CXTT Photobook Featured Image">
-            <h2>CXTT Photobook</h2>
-            <h4>Editorial Design</h4>
-            <button>View Demo →</button>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <h4>Biography</h4>
-        <img src="images/thanh-nguyen.jpg" alt="A Photo of Me">
-        <div>
-            <img src="images/logo.svg" alt="My Logo">
-            <h2>Chi Thanh Nguyen</h2>
-            <h4>A multidisciplinary designer & developer based in Bremen, Germany.
-                Currently UI/UX Designer at <a href="https://www.aboutyou.de/">About You</a>.</h4>
-                
+            <div class="card">
+                <img class="featured-image" src="images/cassiopeia_featured-image.jpg" alt="Cassiopeia Featured Image">
+                <div>
+                    <h2>Cassiopeia</h2>
+                    <h4>Multimodality Design & Development</h4>
+                    <br>
+                    <br>
+                    <button onclick="location.href='cassiopeia'">View Case Study →</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="featured-image" src="images/hashtag_featured-image.jpg"
+                    alt="Hashtag Inspector Featured Image">
+                <div>
+                    <h2>Hashtag Inspector</h2>
+                    <h4>Android App Design & Development</h4>
+                    <br>
+                    <br>
+                    <button onclick="location.href='hashtag'">View Case Study →</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="featured-image" src="images/gtr_featured-image.jpg" alt="GTR Featured Image">
+                <div>
+                    <h2>Global Trends Report</h2>
+                    <h4>Editorial Design</h4>
+                    <br>
+                    <br>
+                    <button onclick="location.href='gtr'">View Demo →</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="featured-image" src="images/cxtt_featured-image.jpg" alt="CXTT Photobook Featured Image">
+                <div>
+                    <h2>CXTT Photobook</h2>
+                    <h4>Editorial Design</h4>
+                    <br>
+                    <br>
+                    <button onclick="location.href='cxtt'">View Demo →</button>
+                </div>
+            </div>
         </div>
     </section>
 </body>
@@ -87,4 +113,5 @@
     <span class="icon-xing"></span>
     <span class="icon-mail"></span>
 </footer>
+
 </html>
