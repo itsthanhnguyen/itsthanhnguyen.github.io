@@ -17,13 +17,17 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <header>
-    <nav>
+    <nav class="desktop">
         <ul>
             <li><a href="#top" class="hyperlink">Top</a></li>
             <li><a href="#projects" class="hyperlink">Projects</a></li>
             <li><a href="#about" class="hyperlink">Résumé</a></li>
             <li><span class="hyperlink">Dark Mode</span></li>
         </ul>
+        <a href="/"><img src="images/logo.svg" alt="My Logo"></a>
+    </nav>
+    <nav class="mobile">
+        <span class="icon-menu"></span>
         <a href="/"><img src="images/logo.svg" alt="My Logo"></a>
     </nav>
 </header>
@@ -47,34 +51,34 @@
     </section>-->
 
     <section id="top">
-        <img src="images/thanh-nguyen.jpg" alt="A Photo of Me">
         <div>
-            <img src="images/logo.svg" alt="My Logo">
-            <br>
-            <h2>Thanh Nguyen</h2>
-            <p>A Saigonese multidisciplinary designer & developer based in Bremen, Germany.
-                Currently UI/UX Designer at <a href="https://www.aboutyou.de/" class="hyperlink">About You</a>.</p>
-
+            <div>
+                <img src="images/logo.svg" alt="My Logo">
+                <br>
+                <h2>Thanh Nguyen</h2>
+                <p>A Saigonese multidisciplinary designer & developer based in Bremen, Germany.
+                    Currently UI/UX Designer at <a href="https://www.aboutyou.de/" class="hyperlink">About You</a>.</p>
+            </div>
         </div>
+        <div id="photo-me"></div>
     </section>
 
     <section id="projects">
         <h2>Selected Projects</h2>
         <h4>UI/UX & Graphic Design, Web Development</h4>
         <div>
-            <div class="card">
-                <img class="featured-image" src="images/cassiopeia_featured-image.jpg" alt="Cassiopeia Featured Image">
+            <div class="card" id="cassiopeia">
                 <div>
                     <h2>Cassiopeia</h2>
                     <h4>Multimodality Design & Development</h4>
                     <br>
                     <br>
                     <button onclick="location.href='cassiopeia'">View Case Study →</button>
-                </div>
+                </div>  
+                <div class="desktop"></div>         
             </div>
-            <div class="card">
-                <img class="featured-image" src="images/hashtag_featured-image.jpg"
-                    alt="Hashtag Inspector Featured Image">
+            <div class="card" id="hashtag">
+                <div class="desktop"></div>
                 <div>
                     <h2>Hashtag Inspector</h2>
                     <h4>Android App Design & Development</h4>
@@ -83,8 +87,7 @@
                     <button onclick="location.href='hashtag'">View Case Study →</button>
                 </div>
             </div>
-            <div class="card">
-                <img class="featured-image" src="images/gtr_featured-image.jpg" alt="GTR Featured Image">
+            <div class="card" id="gtr">
                 <div>
                     <h2>Global Trends Report</h2>
                     <h4>Editorial Design</h4>
@@ -92,9 +95,10 @@
                     <br>
                     <button onclick="location.href='gtr'">View Demo →</button>
                 </div>
+                <div class="desktop"></div>
             </div>
-            <div class="card">
-                <img class="featured-image" src="images/cxtt_featured-image.jpg" alt="CXTT Photobook Featured Image">
+            <div class="card" id="cxtt">    
+                <div class="desktop"></div>
                 <div>
                     <h2>CXTT Photobook</h2>
                     <h4>Editorial Design</h4>
