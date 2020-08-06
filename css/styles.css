@@ -322,25 +322,25 @@ button:hover {
 #cassiopeia {
     background: url("../images/cassiopeia_featured-image.jpg");
     background-size: cover;
-    background-position: top right;
+    background-position: top center;
 }
 
 #hashtag {
     background: url("../images/hashtag_featured-image.jpg");
     background-size: cover;
-    background-position: top left;
+    background-position: top center;
 }
 
 #gtr {
     background: url("../images/gtr_featured-image.jpg");
     background-size: cover;
-    background-position: top right;
+    background-position: top center;
 }
 
 #cxtt {
     background: url("../images/cxtt_featured-image.jpg");
     background-size: cover;
-    background-position: top left;
+    background-position: top center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -381,5 +381,21 @@ button:hover {
 
     #top > div > div {
         margin-right: -1rem;
+    }
+
+    #cassiopeia {
+        background-position: top right;
+    }
+    
+    #hashtag {
+        background-position: top left;
+    }
+    
+    #gtr {
+        background-position: top right;
+    }
+    
+    #cxtt {
+        background-position: top left;
     }
 }
