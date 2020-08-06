@@ -1,0 +1,133 @@
+:root {
+    --red: #BE0E23;
+    --yellow: #ECA72C;
+    --green: #32936F;
+    --blue: #2274A5;
+    --indigo: #31263E;
+    --header-color: #363537;
+    --font-color: #5B5B5B;
+    --bg-color: #FBFBFB;
+    --grey-1: #C5CBD3;
+    --grey-2: #F5F5F5;
+}
+
+[data-theme="dark"] {
+    --red: #EF233C;
+    --yellow: #F4D35E;
+    --green: #2FBF71;
+    --blue: #1B98E0;
+    --indigo: #6D466B;
+    --header-color: #FBFBFB;
+    --font-color: #F5F5F5;
+    --bg-color: #363537;
+    --grey-1: #C5CBD3;
+    --grey-2: #5B5B5B;
+}
+
+html {
+    background: var(--bg-color);
+}
+
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: var(--font-color);
+}
+
+p {
+
+}
+
+h1 {
+    font-family: 'Jost', sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 10.5rem;
+    color: var(--header-color);
+}
+
+h2 {
+    font-family: 'Jost', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 3.75rem;
+    color: var(--header-color);
+}
+
+h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 3rem;
+    color: var(--header-color);
+}
+
+h4 {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    line-height: 1.5rem;
+    color: var(--header-color);
+}
+
+button {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    line-height: 1.5rem;
+    color: var(--header-color);
+    background-color: transparent;
+    display: inline-block;
+    border-radius: 0;
+    border: 0.1rem solid var(--grey-1);
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: 0.5s width cubic-bezier(.25,.75,.5,1.25);
+}
+
+button:hover {
+
+}
+
+.hyperlink {
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15rem;
+    line-height: 1.5rem;
+    color: var(--font-color);
+    position: relative;
+    transition: 0.5s width cubic-bezier(.25,.75,.5,1.25);
+}
+
+.hyperlink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: var(--grey-1);
+    opacity: 0.3;
+    transition: 0.5s width cubic-bezier(.25,.75,.5,1.25);
+}
+
+.hyperlink:visited, .hyperlink:hover, .hyperlink:active {
+    color: var(--header-color);
+}
+
+.hyperlink:hover::after{
+    width: min(100%, 4.5rem);
+    opacity: 1;
+}
