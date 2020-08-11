@@ -42,7 +42,6 @@ body {
 	letter-spacing: 0;
 	color: var(--font-color);
 	margin: 0;
-	overflow-x: hidden;
 }
 
 h1 {
@@ -59,7 +58,54 @@ h2 {
 	font-size: 2.5rem;
 	font-weight: 400;
     letter-spacing: 0;
-    margin: 0;
+	margin: 0;
+}
+
+.flex {
+	display: flex;
+}
+
+
+.content-table {
+    padding: 3rem;
+	position: sticky;
+	position: -webkit-sticky;
+	align-self: flex-start;
+	top: -27rem;
+}
+
+.content-table > div:nth-child(n+2) {
+    margin: 2rem 0;
+}
+
+.content-table > div:nth-child(1) > h4 {
+    margin-top: 0;
+}
+
+.content-table > ol {
+    padding-left: 1.5rem;
+}
+
+.content-table > ol > .hyperlink {
+    margin: 2rem 0;
+    
+}
+
+.icons{
+	display: table;
+	width: 100%;
+}
+
+.icons > div {
+	display: table-cell;
+	max-width: 10rem;
+	text-align: center;
+
+}
+
+.colored-icon{
+    max-height: 10rem;
+    max-width: 10rem;
     line-height: 3.75rem;
 	color: var(--header-color);
 }
@@ -195,9 +241,6 @@ button:hover {
 	-o-transition: 0.2s all ease-in-out;
 }
 
-.featured-image {
-	width: 100vw;
-}
 
 .hyperlink {
 	font-family: "Jost", sans-serif;
@@ -246,38 +289,6 @@ button:hover {
 	opacity: 1;
 }
 
-.card {
-    text-align: center;
-    min-height: 75vh;
-    z-index: 2;
-    vertical-align: middle;
-    height: 100%;
-    top: 0;
-    display: table;
-    transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
-}
-
-.card > div {
-    width: 50vw;
-    display: table-cell;
-    vertical-align: middle;
-    transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
-}
-
-.card:nth-child(2n + 1) > div{
-    left: 0%
-}
-
-.card:nth-child(2n) > div{
-    right: 0;
-}
-
 [class*="icon-"] {
 	font-size: 2rem;
 	color: var(--font-color);
@@ -308,124 +319,12 @@ button:hover {
 	margin: 0;
 }
 
-#top {
-    display: table;
-    padding-left: 25%;
-}
-
-#top > div {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#top > div > div {
-    margin-right: -3rem;
-}
-
-#top > div > * > img {
-    transform: rotate(4deg) scale(2);
-    padding-bottom: 2rem;
-}
-
-#projects {
-    width: calc(100vw - 6rem);
-    padding: 3rem;
-}
-
-#projects > div{
-    width: 100vw;
-    left: 0;
-    margin: 0 0 0 -3rem;
-    position: relative;
-}
-
-#photo-me {
-    background: url("../images/thanh-nguyen.jpg");
-    width: 50vw;
-    margin-right: -3rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; 
-
-}
-
-#cassiopeia {
-    background: url("../images/cassiopeia_featured-image.jpg");
-    background-size: cover;
-    background-position: top center;
-}
-
-#hashtag {
-    background: url("../images/hashtag_featured-image.jpg");
-    background-size: cover;
-    background-position: top center;
-}
-
-#gtr {
-    background: url("../images/gtr_featured-image.jpg");
-    background-size: cover;
-    background-position: top center;
-}
-
-#cxtt {
-    background: url("../images/cxtt_featured-image.jpg");
-    background-size: cover;
-    background-position: top center;
-}
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) { 
     .desktop{
         display: none !important;
     }
 
     .mobile {
         display: inline;
-    }
-
-    .card > div {
-        opacity: 0;
-    }
-
-    .card > div > button{
-        visibility: hidden;
-    }
-
-    .card > div:hover {
-        opacity: 1;
-        background-color: var(--nav-bg-color);
-        backdrop-filter: blur(30px) saturate(125%);
-        -webkit-backdrop-filter: blur(30px) saturate(125%);
-    }
-
-    .card > div:hover > button {
-        visibility: visible;
-    }
-
-    #photo-me {
-        background-size: cover;
-    }
-
-    #top {
-        padding-left: 0.5rem;
-    }
-
-    #top > div > div {
-        margin-right: -1rem;
-    }
-
-    #cassiopeia {
-        background-position: top right;
-    }
-    
-    #hashtag {
-        background-position: top left;
-    }
-    
-    #gtr {
-        background-position: top right;
-    }
-    
-    #cxtt {
-        background-position: top left;
-    }
+	}
 }

@@ -55,10 +55,11 @@ $(document).ready(function() {
         }
     });
 })
-window.onscroll = function() {
+
+/*window.onscroll = function() {
     $('#top').css({
         'top': ($(this).scrollTop() / 1.5) + 'px',
         'opacity': 1 - ($(this).scrollTop() / 830),
         'transform': 'scale(' + (8000 - $(this).scrollTop()) / 8000 + ')',
     });
-}
+}*/
