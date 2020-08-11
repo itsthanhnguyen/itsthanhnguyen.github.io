@@ -115,10 +115,55 @@ $(document).ready(function() {
 
 })
 
-/*window.onscroll = function() {
-    $('#top').css({
-        'top': ($(this).scrollTop() / 1.5) + 'px',
-        'opacity': 1 - ($(this).scrollTop() / 830),
-        'transform': 'scale(' + (8000 - $(this).scrollTop()) / 8000 + ')',
+// Dark light mode switch
+
+var colorScheme;
+
+const savedColorScheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (savedColorScheme) {
+    document.documentElement.setAttribute('data-theme', savedColorScheme);
+    colorScheme = savedColorScheme;
+} else {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        colorScheme = 'dark';
+
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        colorScheme = 'light';
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        colorScheme = e.matches ? "dark" : "light";
     });
-}*/
+}
+
+function switchTheme() {
+    if (colorScheme == 'light') {
+        colorScheme = "dark";
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        $(".switch").removeClass("icon-moon-fill");
+        $(".switch").addClass("icon-sun-fill");
+    } else {
+        colorScheme = "light";
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        $(".switch").addClass("icon-moon-fill");
+        $(".switch").removeClass("icon-sun-fill");
+    }
+}
+
+$(document).ready(function() {
+    if (colorScheme == "dark") {
+        $(".switch").removeClass("icon-moon-fill");
+        $(".switch").addClass("icon-sun-fill");
+    } else {
+        $(".switch").addClass("icon-moon-fill");
+        $(".switch").removeClass("icon-sun-fill");
+    }
+    $(".switch").click(function(e) {
+        switchTheme();
+    });
+});
