@@ -19,6 +19,7 @@ section {
 }
 
 nav {
+	font-size: 18px;
     z-index: 10;
 	width: calc(100vw - 6rem);
 	height: auto;
@@ -178,6 +179,14 @@ nav > div > span:nth-child(n + 2) {
 .colored-icon{
     max-height: 10rem;
     max-width: 10rem;
+}
+
+[class*="icon-font"]{
+	color: var(--grey-1);
+}
+
+.icon-font-size-1{
+	color: var(--header-color);
 }
 
 @media only screen and (max-width: 768px) {

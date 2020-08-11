@@ -70,6 +70,49 @@ $(document).ready(function() {
             navCollapsed = true;
         }
     });
+    $(".icon-font-size-1").click(function(e) {
+        $(":root").css({
+            "font-size": "18px"
+        });
+        $(".icon-font-size-1").css({
+            "color": "var(--header-color)"
+        });
+        $(".icon-font-size-2").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-3").css({
+            "color": "var(--grey-1)"
+        });
+    });
+    $(".icon-font-size-2").click(function(e) {
+        $(":root").css({
+            "font-size": "20px"
+        });
+        $(".icon-font-size-1").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-2").css({
+            "color": "var(--header-color)"
+        });
+        $(".icon-font-size-3").css({
+            "color": "var(--grey-1)"
+        });
+    });
+    $(".icon-font-size-3").click(function(e) {
+        $(":root").css({
+            "font-size": "24px"
+        });
+        $(".icon-font-size-1").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-2").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-3").css({
+            "color": "var(--header-color)"
+        });
+    });
+
 })
 
 /*window.onscroll = function() {

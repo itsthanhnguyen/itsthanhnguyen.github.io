@@ -29,6 +29,7 @@
 html {
 	background: var(--bg-color);
 	scroll-behavior: smooth;
+	font-size: 18px;
 }
 
 header {
@@ -37,7 +38,7 @@ header {
 
 body {
 	font-family: "Be Vietnam", sans-serif;
-	font-size: 18px;
+	font-size: 1rem;
 	font-weight: 400;
 	letter-spacing: 0;
 	color: var(--font-color);
