@@ -12,20 +12,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/post.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <header>
     <span class="switch"></span>
-
+    <span class="scroll-to-top icon-arrow-up2"></span>
     <nav>
-        <span class="icon-menu"></span>
         <div>
-                <div>
-                <span class="icon-font-size-1"></span>
-                <span class="icon-font-size-2"></span>
-                <span class="icon-font-size-3"></span>
-            </div>
+            <span class="icon-menu" style="z-index: -10; visibility: hidden;"></span>
         </div>
-        <a href="/"><img src="images/logo.svg" alt="My Logo"></a>
+        <div>
+            <span class="icon-font-size-1"></span>
+            <span class="icon-font-size-2"></span>
+            <span class="icon-font-size-3"></span>
+        </div>
+        <div>
+            <a href="./"><img src="images/logo.svg" alt="My Logo" class="logo"></a>
+        </div>
     </nav>
 </header>
 
@@ -33,23 +38,27 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div>
-        <img src="images/cxtt_featured-image.jpg" alt="GTR Featured Image">
-        <h2>Chuyen Xe Tuoi Tho Photobook</h2>
+
+    <div class="card" id="cxtt">
+        <div class="desktop"></div>
+        <div>
+            <h2>Chuyen Xe Tuoi Tho Photobook</h2>
         <h4>February 2020</h4>
+        </div>
     </div>
-    <div>
+    <section>
         <h4>tl;dr:</h4>
         <p>This photobook was created for Chuyến Xe Tuổi Thơ (rough translation: Trip to the Childhood, a charity club associated with Vietnamese-German University for children in remote areas) as a visual report for the third trip to Sóc Trăng, Vietnam in January 2017.</p>
-    </div>
+    </section>
     
     <section>
-        <embed src="images/cxtt.pdf" width="800px" height="640px" style="margin-bottom: 2rem;" />
+        <embed src="images/cxtt.pdf" width="800px" height="640px" style="display:block; margin-bottom: 2rem; margin-left: auto; margin-right: auto;" class="desktop"/>
+        <button onclick="location.href='images/cxtt.pdf'">Download ↓</button>
+
     </section>
 
 </body>
 <footer>
-    <h4>© 2020 Thanh Nguyen</h4>
     <h4>© 2020 Thanh Nguyen</h4>
     <a href="https://dribbble.com/itsthanhnguyen/"><span class="icon-dribbble"></span></a>
     <a href="https://www.linkedin.com/in/thanh-nguyen-52112aa2/"><span class="icon-linkedin"></span></a>

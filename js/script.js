@@ -64,7 +64,7 @@ $(document).ready(function() {
             navCollapsed = true;
         }
     });
-    $(".navigation-flyout > ol > li > a").click(function(e) {
+    $(".navigation-flyout > ol > li").click(function(e) {
         if (!navCollapsed){
             collapseNav()
             navCollapsed = true;
@@ -165,5 +165,29 @@ $(document).ready(function() {
     }
     $(".switch").click(function(e) {
         switchTheme();
+    });
+});
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos < 500) {
+        $(".scroll-to-top").css({
+            "transform": "scale(0)",
+            "opacity": "0"
+        });
+    } else {
+        $(".scroll-to-top").css({
+            "transform": "scale(1)",
+            "opacity": "0.5"
+        });
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+$(document).ready(function() {
+    $(".scroll-to-top").click(function(e) {
+        $('html,body').animate({scrollTop:0},0);
     });
 });
