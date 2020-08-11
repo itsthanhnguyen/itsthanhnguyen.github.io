@@ -68,7 +68,7 @@
 }
 
 #photo-me {
-    background: url("../images/thanh-nguyen.jpg");
+    background: url("../images/thanh-nguyen.png");
     width: 40vw;
     background-size: contain;
     background-repeat: no-repeat;
@@ -77,25 +77,25 @@
 }
 
 #cassiopeia {
-    background: url("../images/cassiopeia_featured-image.jpg");
+    background: var(--cassiopeia);
     background-size: cover;
     background-position: top center;
 }
 
 #hashtag {
-    background: url("../images/hashtag_featured-image.jpg");
+    background: var(--hashtag);
     background-size: cover;
     background-position: top center;
 }
 
 #gtr {
-    background: url("../images/gtr_featured-image.jpg");
+    background: var(--gtr);
     background-size: cover;
     background-position: top center;
 }
 
 #cxtt {
-    background: url("../images/cxtt_featured-image.jpg");
+    background: var(--cxtt);
     background-size: cover;
     background-position: top center;
 }

@@ -112,7 +112,7 @@ nav > div > span:nth-child(n + 2) {
 }
 
 #cassiopeia {
-    background: url("../images/cassiopeia_featured-image.jpg");
+    background: var(--cassiopeia);
     background-size: cover;
     background-position: top center;
 }
@@ -128,7 +128,7 @@ nav > div > span:nth-child(n + 2) {
 	position: sticky;
 	position: -webkit-sticky;
 	align-self: flex-start;
-	top: -31rem;
+	top: -26rem;
 	left: 0;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;

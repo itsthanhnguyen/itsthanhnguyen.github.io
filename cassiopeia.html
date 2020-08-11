@@ -35,13 +35,13 @@
     </nav>
     <div class="navigation-flyout">
         <ol>
-            <li class="hyperlink">Dev. Process</li>
-            <li class="hyperlink">Problem Statement</li>
-            <li class="hyperlink">Core User Needs</li>
-            <li class="hyperlink">System Design</li>
-            <li class="hyperlink">User Flow</li>
-            <li class="hyperlink">Interface Design</li>
-            <li class="hyperlink">Key Takeaways</li>
+            <li onclick="location.href='#development-process'" class="hyperlink">Dev. Process</li>
+            <li onclick="location.href='#problem-statement'" class="hyperlink">Problem Statement</li>
+            <li onclick="location.href='#core-user-needs'" class="hyperlink">Core User Needs</li>
+            <li onclick="location.href='#system-design'" class="hyperlink">System Design</li>
+            <li onclick="location.href='#user-flow'" class="hyperlink">User Flow</li>
+            <li onclick="location.href='#interface-design'" class="hyperlink">Interface Design</li>
+            <li onclick="location.href='#key-takeaways'" class="hyperlink">Key Takeaways</li>
         </ol>
     </div>
 </header>
@@ -73,23 +73,23 @@
                 <p>Project Co-Manager</p>
             </div>
             <ol>
-                <li class="hyperlink"><span>Dev. Process</span></li>
-                <li class="hyperlink"><span>Problem Statement</span></li>
-                <li class="hyperlink"><span>Core User Needs</span></li>
-                <li class="hyperlink"><span>System Design</span></li>
-                <li class="hyperlink"><span>User Flow</span></li>
-                <li class="hyperlink"><span>Interface Design</span></li>
-                <li class="hyperlink"><span>Key Takeaways</span></li>
+                <li onclick="location.href='#development-process'" class="hyperlink">Dev. Process</li>
+                <li onclick="location.href='#problem-statement'" class="hyperlink">Problem Statement</li>
+                <li onclick="location.href='#core-user-needs'" class="hyperlink">Core User Needs</li>
+                <li onclick="location.href='#system-design'" class="hyperlink">System Design</li>
+                <li onclick="location.href='#user-flow'" class="hyperlink">User Flow</li>
+                <li onclick="location.href='#interface-design'" class="hyperlink">Interface Design</li>
+                <li onclick="location.href='#key-takeaways'" class="hyperlink">Key Takeaways</li>
             </ol>
         </div>
         <div>
-            <section>
+            <section id="development-process">
                 <h2>Development Process</h2>
                 <br>
                 <img src="images/cassiopeia_design-process.png" alt="Development Process">
             </section>
             <hr>
-            <section>
+            <section id="problem-statement">
                 <h2>Problem Statement</h2>
                 <p>During the master project at University of Bremen, we were required to collaborate with MaMBA at ZARM
                     to design and develop a piece of technology that is helpful for scientists on an extraterrestrial
@@ -118,7 +118,7 @@
                 </div>
             </section>
             <hr>
-            <section>
+            <section id="core-user-needs">
                 <h2>Core User Needs</h2>
                 <h3>Assistance with Laboratory Tasks</h3>
                 <p>Conducting scientific experiments is a huge part of the mission. Life inside the habitat is
@@ -145,7 +145,7 @@
                     the habitat.</p>
             </section>
             <hr>
-            <section>
+            <section id="system-design">
                 <h2>System Design</h2>
                 <p>CASSIOPEIA serves as a compact decentralized voice assistant that enables crew members to select an
                     experiment they want to conduct and guides them through a predefined set of instructions of the
@@ -171,7 +171,7 @@
                     point-and-touch interaction included.</p>
             </section>
             <hr>
-            <section>
+            <section id="user-flow">
                 <h2>User Flow</h2>
                 <p>I – as an interaction designer – kept role-playing with other team members for hours (one as a crew
                     member and the other as the system) to figure out the most natural and intuitive way to guide the
@@ -201,7 +201,7 @@
                     instructions and observed quite a lot of distractions and confusion.</p>
             </section>
             <hr>
-            <section>
+            <section id="interface-design">
                 <h2>Interface Design</h2>
                 <img src="images/cassiopeia_ui-preview.png" alt="UI Preview" class="img-halfwidth">
                 <p>The GUI serves as a complementary output channel which, long story short, shows the crew members
@@ -214,7 +214,7 @@
                     <li>It can take forever to get the desired piece of information from the spoken message</li>
                 </ul>
                 <p>To tackle the mentioned problems, we started with building the wireframe together, then I instantly
-                    created <a href="">this prototype</a> of the UI in Figma with the following features:</p>
+                    created <a href="https://www.figma.com/proto/sMP8xQaeBJupecp9TT7dpT/LoM?node-id=4%3A104&viewport=73%2C329%2C0.07611791789531708&scaling=min-zoom'" class="hyperlink">this prototype</a> of the UI in Figma with the following features:</p>
                 <ul>
                     <li>Large text and reasonable color contrast, so as to increase readability from a distance</li>
                     <li>Animated hint-bubbles, to show the available commands</li>
@@ -233,7 +233,7 @@
                     it’s clear that the hints are suggestions, not restrictions.</p>
             </section>
             <hr>
-            <section>
+            <section id="key-takeaways">
                 <h2>Key Takeaways</h2>
                 <p>We carried out a between-subject user study inside the lab module at MaMBA with English-speaking
                     participants experienced in labworks. All of them have heard of Google Assistant or Amazon Alexa,
@@ -264,12 +264,12 @@
     </div>
 </body>
 <footer>
-    <a href="hashtag" class="hyperlink">Next: Hashtag Inspector →</a>
+    <a href="hashtag'" class="hyperlink">Next: Hashtag Inspector →</a>
     <h4>© 2020 Thanh Nguyen</h4>
-    <span class="icon-dribbble"></span>
-    <span class="icon-linkedin"></span>
-    <span class="icon-xing"></span>
-    <span class="icon-mail"></span>
+    <a href="https://dribbble.com/itsthanhnguyen/"><span class="icon-dribbble"></span></a>
+    <a href="https://www.linkedin.com/in/thanh-nguyen-52112aa2/"><span class="icon-linkedin"></span></a>
+    <a href="https://www.xing.com/profile/Thanh_Nguyen135/"><span class="icon-xing"></span></a>
+    <a href="mailto:itsthanhng@gmail.com?subject=Hello!"><span class="icon-mail"></span></a>
 </footer>
 
 </html>
