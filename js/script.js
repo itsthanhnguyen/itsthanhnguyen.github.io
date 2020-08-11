@@ -1,6 +1,6 @@
 function expandNav() {
-    if ($(window).width() < 768) {
-        $(".navigation-flyout > ul").css({
+    if ($(window).width() <= 768) {
+        $(".navigation-flyout > ol").css({
             "visibility": "visible"
         });
         $(".navigation-flyout").css({
@@ -25,8 +25,8 @@ function expandNav() {
 }
 
 function collapseNav() {
-    if ($(window).width() < 768) {
-        $(".navigation-flyout > ul").css({
+    if ($(window).width() <= 768) {
+        $(".navigation-flyout > ol").css({
             "visibility": "hidden"
         });
         $(".navigation-flyout").css({
@@ -50,7 +50,7 @@ function collapseNav() {
 }
 
 $(document).ready(function() {
-    if ($(window).width() < 768) {
+    if ($(window).width() <= 768) {
         var navCollapsed = true;
     } else {
         var navCollapsed = false;
@@ -64,7 +64,7 @@ $(document).ready(function() {
             navCollapsed = true;
         }
     });
-    $(".navigation-flyout > ul > li > a").click(function(e) {
+    $(".navigation-flyout > ol > li > a").click(function(e) {
         if (!navCollapsed){
             collapseNav()
             navCollapsed = true;

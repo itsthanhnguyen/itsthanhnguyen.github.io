@@ -53,7 +53,7 @@ nav > div > span:nth-child(n + 2) {
 .navigation-flyout {
 	position: fixed;
 	text-align: center;
-	z-index: 9;
+	z-index: -10;
 	display: table;
 	background-color: var(--nav-bg-color);
     backdrop-filter: blur(30px) saturate(125%);
@@ -65,19 +65,24 @@ nav > div > span:nth-child(n + 2) {
 	-o-transition: 0.2s all ease-in-out;
 }
 
-.navigation-flyout > ul {
+.navigation-flyout > ol {
 	width: 100vw;
 	height: 100vh;
 	display: table-cell;
+	text-align: center;
 	vertical-align: middle;
 	list-style: none;
 	line-height: 5rem;
-	padding: 0;
 	visibility: hidden;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
+}
+
+.navigation-flyout > ol > li{
+	text-align: left;
+	margin: 2rem;
 }
 
 .card {
@@ -121,7 +126,7 @@ nav > div > span:nth-child(n + 2) {
 	position: sticky;
 	position: -webkit-sticky;
 	align-self: flex-start;
-	top: -28rem;
+	top: -31rem;
 	left: 0;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
@@ -145,7 +150,8 @@ nav > div > span:nth-child(n + 2) {
 }
 
 .content-table > ol {
-	padding-left: 1.5rem;
+	padding-left: 0rem;
+	list-style: none;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;

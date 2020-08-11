@@ -67,32 +67,6 @@ h2 {
 	display: flex;
 }
 
-
-.content-table {
-    padding: 3rem;
-	position: sticky;
-	position: -webkit-sticky;
-	align-self: flex-start;
-	top: -27rem;
-}
-
-.content-table > div:nth-child(n+2) {
-    margin: 2rem 0;
-}
-
-.content-table > div:nth-child(1) > h4 {
-    margin-top: 0;
-}
-
-.content-table > ol {
-    padding-left: 1.5rem;
-}
-
-.content-table > ol > .hyperlink {
-    margin: 2rem 0;
-    
-}
-
 .icons{
 	display: table;
 	width: 100%;
