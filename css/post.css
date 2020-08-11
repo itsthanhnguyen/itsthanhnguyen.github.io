@@ -9,16 +9,76 @@ h2 {
 
 img {
     width: 100%;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 section {
     text-align: left;
-    padding: 3rem;
+	padding: 3rem;
+	min-height: auto;
 }
 
+nav {
+    z-index: 10;
+	width: calc(100vw - 6rem);
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 3rem;
+	bottom: 0;
+	position: fixed;
+    background-color: var(--nav-bg-color);
+    backdrop-filter: blur(30px) saturate(125%);
+    -webkit-backdrop-filter: blur(30px) saturate(125%);
+}
 
+nav > div > a > img {
+	width: 3rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
 
+nav > div > span {
+    line-height: 1.5rem;
+    color: var(--header-color);
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    margin-left: 0 !important;
+	cursor: pointer;
+}
+
+nav > div > span:nth-child(n + 2) {
+	padding: 1.5rem;
+}
+
+.navigation-flyout {
+	position: fixed;
+	text-align: center;
+	z-index: 9;
+	display: table;
+	background-color: var(--nav-bg-color);
+    backdrop-filter: blur(30px) saturate(125%);
+	-webkit-backdrop-filter: blur(30px) saturate(125%);
+	opacity: 0;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition:0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+}
+
+.navigation-flyout > ul {
+	width: 100vw;
+	height: 100vh;
+	display: table-cell;
+	vertical-align: middle;
+	list-style: none;
+	line-height: 5rem;
+	padding: 0;
+	visibility: hidden;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+}
 
 .card {
     text-align: center;
@@ -61,19 +121,35 @@ section {
 	position: sticky;
 	position: -webkit-sticky;
 	align-self: flex-start;
-	top: -27rem;
+	top: -28rem;
+	left: 0;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+}
+
+.content-table > div {
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
 }
 
 .content-table > div:nth-child(n+2) {
-    margin: 2rem 0;
+	margin: 3rem 0;
 }
 
 .content-table > div:nth-child(1) > h4 {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .content-table > ol {
-    padding-left: 1.5rem;
+	padding-left: 1.5rem;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
 }
 
 .content-table > ol > .hyperlink {
@@ -99,27 +175,39 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
+	section {
+		padding: 3rem 1rem;
+		width: calc(100vw - 2rem)
+	}
 
-    .card > div {
-        opacity: 0;
-    }
+	nav {
+		padding: 0 1rem;
+		width: calc(100vw - 2rem);
+	}
 
-    .card > div > button{
-        visibility: hidden;
-    }
+	nav > div > span, nav > div > span:nth-child(n + 2) {
+		padding: 1.5rem 0.5rem 1.5rem 0rem;
+	}
 
-    .card > div:hover {
-        opacity: 1;
-        background-color: var(--nav-bg-color);
-        backdrop-filter: blur(30px) saturate(125%);
-        -webkit-backdrop-filter: blur(30px) saturate(125%);
-    }
+	.card {
+		width: 100vw;
+	}
 
-    .card > div:hover > button {
-        visibility: visible;
-    }
+	.card > div {
+		display: none;
+	}
 
     #cassiopeia {
         background-position: top right;
-    }
+	}
+	
+	.icons {
+		display: inline-block;
+	}
+
+	.icons > div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
