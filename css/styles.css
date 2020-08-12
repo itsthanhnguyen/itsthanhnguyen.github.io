@@ -26,7 +26,7 @@
 	--indigo: #6d466b;
 	--header-color: #fbfbfb;
 	--font-color: #cccccc;
-	--bg-color: #363537;
+	--bg-color: rgb(21,21,21);
 	--logo-color: invert(99%) sepia(96%) saturate(0%) hue-rotate(104deg);
     --nav-bg-color: rgba(21, 21, 21, 0.9);
 	--grey-1: #c5cbd3;
@@ -45,6 +45,7 @@ html {
 	background-size: auto 100vh;
 	background-attachment: fixed;
 	font-size: 18px;
+	background-color: var(--bg-color);
 }
 
 header {
