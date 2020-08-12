@@ -211,7 +211,7 @@ window.onscroll = function() {
 
 $(document).ready(function() {
     $(".scroll-to-top").click(function(e) {
-        $('html,body').animate({scrollTop:0},500);
+        $('html,body').animate({scrollTop:0},0);
     });
 });
 
@@ -221,7 +221,7 @@ $(document).ready(function() {
         var navigateTo = "http://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
         $('html, body').animate({
             scrollTop: $("#"+$(this).parents().parents()[0].id).offset().top
-        }, 500, function() {
+        }, 0, function() {
             window.location.assign(navigateTo);
         })
     });
