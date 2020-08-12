@@ -6,7 +6,8 @@
 	--indigo: #31263e;
 	--header-color: #363537;
 	--font-color: #5b5b5b;
-    --bg-color: #fbfbfb;
+	--bg-color: #fbfbfb;
+	--logo-color: invert(0%) sepia(00) saturate(0%) hue-rotate(0);
     --nav-bg-color: rgba(245, 245, 245, 0.9);
 	--grey-1: #c5cbd3;
 	--grey-2: #f5f5f5;
@@ -24,7 +25,8 @@
 	--indigo: #6d466b;
 	--header-color: #fbfbfb;
 	--font-color: #cccccc;
-    --bg-color: #363537;
+	--bg-color: #363537;
+	--logo-color: invert(99%) sepia(96%) saturate(0%) hue-rotate(104deg);
     --nav-bg-color: rgba(44, 43, 45, 0.9);
 	--grey-1: #c5cbd3;
 	--grey-2: #5b5b5b;
@@ -240,7 +242,6 @@ button:hover {
 .scroll-to-top {
 	position: fixed;
 	right: 3rem;
-	bottom: 5rem;
 	cursor: pointer;
 	font-size: 1.5rem;
 	opacity: 0.5;
@@ -257,6 +258,11 @@ button:hover {
 
 .dark-img {
 	display: none;
+}
+
+.logo {
+	filter: var(--logo-color);
+	-webkit-filter: var(--logo-color);
 }
 
 #cassiopeia {
