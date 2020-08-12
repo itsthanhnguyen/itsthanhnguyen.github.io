@@ -16,6 +16,7 @@
 	--gtr: url("../images/gtr_featured-image.jpg");
 	--cxtt: url("../images/cxtt_featured-image.jpg");
 	--background: url("../images/background.png");
+	--me: url("../images/thanh-nguyen.jpg");
 }
 
 [data-theme="dark"] {
@@ -36,6 +37,7 @@
 	--gtr: url("../images/gtr_featured-image-dark.jpg");
 	--cxtt: url("../images/cxtt_featured-image-dark.jpg");
 	--background: url("../images/background-dark.png");
+	--me: url("../images/thanh-nguyen-dark.jpg");
 }
 
 html {

@@ -71,7 +71,7 @@
 }
 
 #photo-me {
-    background: url("../images/thanh-nguyen.png");
+    background: var(--me);
     width: 40vw;
     background-size: contain;
     background-repeat: no-repeat;
