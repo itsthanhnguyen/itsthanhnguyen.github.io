@@ -220,6 +220,8 @@ $(document).ready(function() {
     $(".card > div > button").click(function(e) {
         $('html, body').animate({
             scrollTop: $("#"+$(this).parents().parents()[0].id).offset().top
-        }, 50);
+        }, 50), function(e) {
+            window.location.href = 'http://www.google.com'+$(this).parents().parents()[0].id;
+        };
     });
 });
