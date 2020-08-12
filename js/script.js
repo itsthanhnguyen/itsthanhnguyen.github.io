@@ -127,7 +127,6 @@ if (savedColorScheme) {
 } else {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         colorScheme = 'dark';
-
         document.documentElement.setAttribute('data-theme', 'dark');
     } else {
         colorScheme = 'light';
@@ -146,12 +145,24 @@ function switchTheme() {
         localStorage.setItem('theme', 'dark');
         $(".switch").removeClass("icon-moon-fill");
         $(".switch").addClass("icon-sun-fill");
+        $(".dark-img").css({
+            "display": "block"
+        });
+        $(".light-img").css({
+            "display": "none"
+        });
     } else {
         colorScheme = "light";
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
         $(".switch").addClass("icon-moon-fill");
         $(".switch").removeClass("icon-sun-fill");
+        $(".light-img").css({
+            "display": "block"
+        });
+        $(".dark-img").css({
+            "display": "none"
+        });
     }
 }
 
@@ -159,9 +170,21 @@ $(document).ready(function() {
     if (colorScheme == "dark") {
         $(".switch").removeClass("icon-moon-fill");
         $(".switch").addClass("icon-sun-fill");
+        $(".dark-img").css({
+            "display": "block"
+        });
+        $(".light-img").css({
+            "display": "none"
+        });
     } else {
         $(".switch").addClass("icon-moon-fill");
         $(".switch").removeClass("icon-sun-fill");
+        $(".light-img").css({
+            "display": "block"
+        });
+        $(".dark-img").css({
+            "display": "none"
+        });
     }
     $(".switch").click(function(e) {
         switchTheme();

@@ -255,6 +255,10 @@ button:hover {
 	margin: 0;
 }
 
+.dark-img {
+	display: none;
+}
+
 #cassiopeia {
     background: var(--cassiopeia);
     background-size: cover;

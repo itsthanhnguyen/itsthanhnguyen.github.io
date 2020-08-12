@@ -81,7 +81,10 @@
         <div>
             <section id="development-process">
                 <h2>Development Process</h2>
-                <img src="images/hashtag_design-process.png" alt="Development Process">
+                <picture>
+                    <img src="images/hashtag_design-process-dark.png" alt="Development Process" class="dark-img">
+                    <img src="images/hashtag_design-process.png" alt="Development Process" class="light-img">
+                  </picture>
             </section>
 
             <section id="inspiration">
@@ -100,14 +103,16 @@
                     relevant to each other?” </p>
                 <p>I, with those questions in my mind, scribbled and doodled out an algorithm to gather hashtags
                     relevant to a hashtag, and it turned out to be simpler than I expected.</p>
-                <img src="images/hashtag_algorithm.png" alt="Algorithm">
+                <img src="images/hashtag_algorithm.png" alt="Algorithm" class="light-img">
+                <img src="images/hashtag_algorithm-dark.png" alt="Algorithm" class="dark-img">
             </section>
 
             <section id="system-design">
                 <h2>System Design</h2>
                 <p>Considering the amount of time we had, we decided to stick to the MVP and keep it as simple as
                     possible:</p>
-                <img src="images/hashtag_system-architecture.png" alt="Architecture">
+                <img src="images/hashtag_system-architecture.png" alt="Architecture" class="light-img">
+                <img src="images/hashtag_system-architecture-dark.png" alt="Architecture" class="dark-img">
                 <p>The back-end of the app consists of a Twitter API (Twitter4j, to query tweets), a sentiment analysis
                     module (Microsoft Text Analytics, to detect the sentiment of the queried tweets), and a database
                     (SQLite) to store the previous queries. </p>
