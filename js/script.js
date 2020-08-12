@@ -218,10 +218,11 @@ $(document).ready(function() {
 // Transition
 $(document).ready(function() {
     $(".card > div > button").click(function(e) {
+        var navigateTo = "http://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
         $('html, body').animate({
             scrollTop: $("#"+$(this).parents().parents()[0].id).offset().top
-        }, 50), function(e) {
-            window.location.href = 'http://www.google.com'+$(this).parents().parents()[0].id;
-        };
+        }, 500, function() {
+            window.location.assign(navigateTo);
+        })
     });
 });
