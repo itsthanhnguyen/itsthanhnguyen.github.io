@@ -211,6 +211,15 @@ window.onscroll = function() {
 
 $(document).ready(function() {
     $(".scroll-to-top").click(function(e) {
-        $('html,body').animate({scrollTop:0},0);
+        $('html,body').animate({scrollTop:0},500);
+    });
+});
+
+// Transition
+$(document).ready(function() {
+    $(".card > div > button").click(function(e) {
+        $('html, body').animate({
+            scrollTop: $("#"+$(this).parents().parents()[0].id).offset().top
+        }, 50);
     });
 });
