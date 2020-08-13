@@ -48,6 +48,7 @@ html {
 	font-size: 18px;
 	background-color: var(--bg-color);
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 header {
@@ -174,7 +175,7 @@ button:hover {
     display: none;
 }
 
-.hyperlink {
+.hyperlink, .hyperlink-2 {
 	font-family: "Jost", sans-serif;
 	font-size: 1rem;
 	font-weight: 600;
@@ -192,7 +193,7 @@ button:hover {
 	-o-transition: 0.25s width ease-in-out;
 }
 
-.hyperlink::after {
+.hyperlink::after, .hyperlink-2::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -207,18 +208,24 @@ button:hover {
 	-o-transition: 0.25s width ease-in-out;
 }
 
-.hyperlink:visited {
+.hyperlink:visited, .hyperlink-2:visited {
 	color: var(--font-color);
 }
 
 .hyperlink:hover,
-.hyperlink:active {
+.hyperlink:active,
+.hyperlink-2:hover,
+.hyperlink-2:active {
 	color: var(--header-color);
 }
 
-.hyperlink:hover::after {
+.hyperlink:hover::after, .hyperlink-2:hover::after {
 	width: min(100%, 4.5rem);
 	opacity: 1;
+}
+
+.hyperlink-2::after {
+	left: 1.65rem;
 }
 
 [class*="icon-"] {

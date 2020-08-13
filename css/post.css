@@ -199,6 +199,15 @@ nav > div > span:nth-child(n + 2) {
 	margin-right: auto;
 }
 
+.prev-next-posts {
+	display: flex;
+	width: calc(100vw - 6rem);
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: space-between;
+}
+
+
 #cassiopeia-ct {
 	top: -26rem;
 }
@@ -270,5 +279,20 @@ nav > div > span:nth-child(n + 2) {
 		-moz-transition: 0.2s all ease-in-out;
 		-o-transition: 0.2s all ease-in-out;
 		margin-left: 18px;
+	}
+
+	.prev-next-posts {
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.prev-next-posts > a:nth-child(1) {
+		margin-left: 0
+	}
+
+	.prev-next-posts > a:nth-child(2) {
+		margin-right: 0
 	}
 }
