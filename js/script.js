@@ -115,6 +115,58 @@ $(document).ready(function () {
 
 })
 
+
+// Scroll
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos < 500) {
+                    $(".scroll-to-top").css({
+                        "transform": "scale(0)",
+                        "opacity": "0"
+                    });
+    } else {
+                    $(".scroll-to-top").css({
+                        "transform": "scale(1)",
+                        "opacity": "0.5"
+                    });
+    }
+    prevScrollpos = currentScrollPos;
+}
+
+$(document).ready(function() {
+                    $(".scroll-to-top").click(function (e) {
+                        $('html,body').animate({ scrollTop: 0 }, 0);
+                    });
+});
+
+// Transition
+$(document).ready(function() {
+                    console.log(window.location.href);
+    if ($(window).width() <= 768 && window.location.href == "https://itsthanhnguyen.github.io/"){
+        $(".card").click(function (e) {
+            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
+            $('html, body').animate({
+                scrollTop: $("#" + $(this)[0].id).offset().top
+            }, 0, function () {
+                window.location.assign(navigateTo);
+            })
+        });
+    } else {
+        $(".card > div > button").click(function (e) {
+            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
+            $('html, body').animate({
+                scrollTop: $("#" + $(this).parents().parents()[0].id).offset().top
+            }, 0, function () {
+                window.location.assign(navigateTo);
+            })
+        });
+    }
+});
+
+
 // Dark light mode switch
 
 var colorScheme;
@@ -203,54 +255,4 @@ $(document).ready(function () {
     $(".switch").click(function (e) {
         switchTheme();
     });
-});
-
-// Scroll
-
-var prevScrollpos = window.pageYOffset;
-
-window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 500) {
-                    $(".scroll-to-top").css({
-                        "transform": "scale(0)",
-                        "opacity": "0"
-                    });
-    } else {
-                    $(".scroll-to-top").css({
-                        "transform": "scale(1)",
-                        "opacity": "0.5"
-                    });
-    }
-    prevScrollpos = currentScrollPos;
-}
-
-$(document).ready(function() {
-                    $(".scroll-to-top").click(function (e) {
-                        $('html,body').animate({ scrollTop: 0 }, 0);
-                    });
-});
-
-// Transition
-$(document).ready(function() {
-                    console.log(window.location.href);
-    if ($(window).width() <= 768 && window.location.href == "https://itsthanhnguyen.github.io/"){
-                    $(".card").click(function (e) {
-                        var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
-                        $('html, body').animate({
-                            scrollTop: $("#" + $(this)[0].id).offset().top
-                        }, 0, function () {
-                            window.location.assign(navigateTo);
-                        })
-                    });
-    } else {
-                    $(".card > div > button").click(function (e) {
-                        var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
-                        $('html, body').animate({
-                            scrollTop: $("#" + $(this).parents().parents()[0].id).offset().top
-                        }, 0, function () {
-                            window.location.assign(navigateTo);
-                        })
-                    });
-    }
 });
