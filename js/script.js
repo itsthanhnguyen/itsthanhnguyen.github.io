@@ -217,12 +217,24 @@ $(document).ready(function() {
 
 // Transition
 $(document).ready(function() {
-    $(".card > div > button").click(function(e) {
-        var navigateTo = "http://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
-        $('html, body').animate({
-            scrollTop: $("#"+$(this).parents().parents()[0].id).offset().top
-        }, 0, function() {
-            window.location.assign(navigateTo);
-        })
-    });
+    console.log(window.location.href);
+    if ($(window).width() <= 768 && window.location.href == "https://itsthanhnguyen.github.io/"){
+        $(".card").click(function(e) {
+            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
+            $('html, body').animate({
+                scrollTop: $("#"+$(this)[0].id).offset().top
+            }, 0, function() {
+                window.location.assign(navigateTo);
+            })
+        });
+    } else {
+        $(".card > div > button").click(function(e) {
+            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
+            $('html, body').animate({
+                scrollTop: $("#"+$(this).parents().parents()[0].id).offset().top
+            }, 0, function() {
+                window.location.assign(navigateTo);
+            })
+        });
+    }
 });

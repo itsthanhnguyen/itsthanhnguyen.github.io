@@ -237,6 +237,10 @@ button:hover {
 	color: var(--header-color);
 }
 
+.icon-dribbble {
+	margin-left: 0
+}
+
 .switch {
 	position: fixed;
 	top: 3rem;
@@ -258,10 +262,6 @@ button:hover {
 
 .switch:hover, .scroll-to-top:hover{
 	opacity: 1;
-}
-
-.icon-dribbble {
-	margin: 0;
 }
 
 .dark-img {
@@ -319,19 +319,75 @@ button:hover {
 		top: 1.5rem
 	}
 
+	.card {
+        width: 100vw;
+        min-height: 30vh !important;
+    }
+
+    .card > div {
+        width: 100vw;
+        vertical-align: bottom !important;
+        padding: 1rem;
+    }
+
+    .card > div > br {
+        display: none;
+    }
+
+    .card > div > h2 {
+        font-size: 1.5rem;
+    }
+
+    .card > div > h4 {
+        font-size: 0.75rem;
+        margin: 0;
+	}
+	
+	[class*="icon-"] {
+		font-size: 27px;
+		color: var(--font-color);
+		display: inline-block;
+		transition: 0.2s all ease-in-out;
+		-webkit-transition: 0.2s all ease-in-out;
+		-moz-transition: 0.2s all ease-in-out;
+		-o-transition: 0.2s all ease-in-out;
+		margin-left: 18px;
+	}
+
+	.icon-dribbble {
+		margin-left: 0;
+	}
+
 	#cassiopeia {
-        background-position: top right;
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cassiopeia);
+        background-size: cover;
+        background-position: top center;
     }
     
     #hashtag {
-        background-position: top left;
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--hashtag);
+        background-size: cover;
+        background-position: top center;
     }
     
     #gtr {
-        background-position: top right;
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--gtr);
+        background-size: cover;
+        background-position: top center;
     }
     
     #cxtt {
-        background-position: top left;
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cxtt);
+        background-size: cover;
+        background-position: top center;
     }
+
+	#cassiopeia > div, #gtr > div {
+		text-align: left;
+	}
+
+	#hashtag > div, #cxtt > div {
+		text-align: right;
+	}
+    
 }
