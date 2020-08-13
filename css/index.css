@@ -3,35 +3,35 @@
 }
 
 .card {
-    text-align: center;
-    min-height: 75vh;
-    z-index: 2;
-    vertical-align: middle;
-    height: 100%;
-    top: 0;
-    display: table;
-    transition: 0.2s all ease-in-out;
+	text-align: center;
+	min-height: 75vh;
+	z-index: 2;
+	vertical-align: middle;
+	height: 100%;
+	top: 0;
+	display: table;
+	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
 }
 
 .card > div {
-    width: 50vw;
-    display: table-cell;
-    vertical-align: middle;
-    transition: 0.2s all ease-in-out;
+	width: 50vw;
+	display: table-cell;
+	vertical-align: middle;
+	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
 }
 
-.card:nth-child(2n + 1) > div{
-    left: 0%
+.card:nth-child(2n + 1) > div {
+	left: 0%;
 }
 
-.card:nth-child(2n) > div{
-    right: 0;
+.card:nth-child(2n) > div {
+	right: 0;
 }
 
 .scroll-to-top {
@@ -39,73 +39,72 @@
 }
 
 #top {
-    display: table;
-    padding-left: 25%;
-    margin: 3rem;
+	display: table;
+	padding-left: 25%;
+	margin: 3rem;
 }
 
 #top > div {
-    display: table-cell;
-    vertical-align: middle;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #top > div > div {
-    margin-right: -2rem;
+	margin-right: -2rem;
 }
 
 #top > div > * > img {
-    transform: rotate(4deg) scale(2);
-    padding-bottom: 2rem;
+	transform: rotate(4deg) scale(2);
+	padding-bottom: 2rem;
 }
 
 #projects {
-    width: calc(100vw - 6rem);
-    padding: 3rem;
+	width: calc(100vw - 6rem);
+	padding: 3rem;
 }
 
-#projects > div{
-    width: 100vw;
-    left: 0;
-    margin: 0 0 0 -3rem;
-    position: relative;
+#projects > div {
+	width: 100vw;
+	left: 0;
+	margin: 0 0 0 -3rem;
+	position: relative;
 }
 
 #photo-me {
-    width: 40vw;
-    
+	width: 40vw;
 }
 
 .no-webp #photo-me {
-    background: var(--me);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; 
+	background: var(--me);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .webp #photo-me {
-    background: var(--me-webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; 
+	background: var(--me-webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 @media only screen and (max-width: 768px) {
-    footer {
-        padding: 0 1rem;
-    }
+	footer {
+		padding: 0 1rem;
+	}
 
-    #top {
-        padding: 1rem;
-        margin: 0;
-    }
+	#top {
+		padding: 1rem;
+		margin: 0;
+	}
 
-    #top > div > div {
-        margin-right: 0;
-    }
+	#top > div > div {
+		margin-right: 0;
+	}
 
-    #top > div > * > img {
-        transform: rotate(4deg) scale(1.5);
-        padding-bottom: 2rem;
-        margin-right: 1rem;
-    }
+	#top > div > * > img {
+		transform: rotate(4deg) scale(1.5);
+		padding-bottom: 2rem;
+		margin-right: 1rem;
+	}
 }

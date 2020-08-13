@@ -120,32 +120,31 @@ $(document).ready(function () {
 
 var prevScrollpos = window.pageYOffset;
 
-window.onscroll = function() {
+window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos < 500) {
-                    $(".scroll-to-top").css({
-                        "transform": "scale(0)",
-                        "opacity": "0"
-                    });
+        $(".scroll-to-top").css({
+            "transform": "scale(0)",
+            "opacity": "0"
+        });
     } else {
-                    $(".scroll-to-top").css({
-                        "transform": "scale(1)",
-                        "opacity": "0.5"
-                    });
+        $(".scroll-to-top").css({
+            "transform": "scale(1)",
+            "opacity": "0.5"
+        });
     }
     prevScrollpos = currentScrollPos;
 }
 
-$(document).ready(function() {
-                    $(".scroll-to-top").click(function (e) {
-                        $('html,body').animate({ scrollTop: 0 }, 0);
-                    });
+$(document).ready(function () {
+    $(".scroll-to-top").click(function (e) {
+        $('html,body').animate({ scrollTop: 0 }, 0);
+    });
 });
 
 // Transition
-$(document).ready(function() {
-                    console.log(window.location.href);
-    if ($(window).width() <= 768 && window.location.href == "https://itsthanhnguyen.github.io/"){
+$(document).ready(function () {
+    if ($(window).width() <= 768 && window.location.href == "https://itsthanhnguyen.github.io/") {
         $(".card").click(function (e) {
             var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
             $('html, body').animate({
@@ -185,9 +184,14 @@ if (savedColorScheme) {
         document.documentElement.setAttribute('data-theme', 'light');
     }
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        colorScheme = e.matches ? "dark" : "light";
-    });
+    try {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            colorScheme = e.matches ? "dark" : "light";
+        });
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
 
 function switchTheme() {
@@ -204,7 +208,7 @@ function switchTheme() {
     }
 }
 
-function darkMode (){
+function darkMode() {
     $(".switch").removeClass("icon-moon-fill");
     $(".switch").addClass("icon-sun-fill");
     $(".dark-img").css({
@@ -214,18 +218,18 @@ function darkMode (){
         "display": "none"
     });
     $("#hashtag_design-process").html("<source srcset='images/hashtag_design-process-dark.webp' type='image/webp'> <source srcset='images/hashtag_design-process-dark.png' type='image/png'> <img src='images/hashtag_design-process-dark.png' alt='Development Process'></img>");
-    $("#hashtag_algorithm").html("<source srcset='images/hashtag_algorithm-dark.webp' type='image/webp'> <source srcset='images/hashtag_algorithm-dark.png' type='image/png'> <img src='images/hashtag_algorithm-dark.png' alt='Algorithm'>");  
+    $("#hashtag_algorithm").html("<source srcset='images/hashtag_algorithm-dark.webp' type='image/webp'> <source srcset='images/hashtag_algorithm-dark.png' type='image/png'> <img src='images/hashtag_algorithm-dark.png' alt='Algorithm'>");
     $("#hashtag_system-architecture").html("<source srcset='images/hashtag_system-architecture-dark.webp' type='image/webp'> <source srcset='images/hashtag_system-architecture-dark.png' type='image/png'> <img src='images/hashtag_system-architecture-dark.png' alt='System Architecture'>");
-    
+
     $("#cassiopeia_constraints_small").html("<source srcset='images/cassiopeia_constraints_small-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_small-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_small-dark.png' alt='Small-Sized Habitat'></img>");
-    $("#cassiopeia_constraints_slow").html("<source srcset='images/cassiopeia_constraints_slow-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_slow-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_slow-dark.png' alt='Slow Internet Connection'>");  
+    $("#cassiopeia_constraints_slow").html("<source srcset='images/cassiopeia_constraints_slow-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_slow-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_slow-dark.png' alt='Slow Internet Connection'>");
     $("#cassiopeia_constraints_sad").html("<source srcset='images/cassiopeia_constraints_sad-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_sad-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_sad-dark.png' alt='Pronity to Mental Distress'>");
     $("#cassiopeia_constraints_lab").html("<source srcset='images/cassiopeia_constraints_lab-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_lab-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_lab-dark.png' alt='Complex Laboratory Tasks'></img>");
-    $("#cassiopeia_system-architecture").html("<source srcset='images/cassiopeia_system-architecture-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_system-architecture-dark.png' type='image/png'> <img src='images/cassiopeia_system-architecture-dark.png' alt='System Architecture'>");  
+    $("#cassiopeia_system-architecture").html("<source srcset='images/cassiopeia_system-architecture-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_system-architecture-dark.png' type='image/png'> <img src='images/cassiopeia_system-architecture-dark.png' alt='System Architecture'>");
 
 }
 
-function lightMode (){
+function lightMode() {
     $(".switch").addClass("icon-moon-fill");
     $(".switch").removeClass("icon-sun-fill");
     $(".light-img").css({
@@ -239,10 +243,10 @@ function lightMode (){
     $("#hashtag_system-architecture").html("<source srcset='images/hashtag_system-architecture.webp' type='image/webp'> <source srcset='images/hashtag_system-architecture.png' type='image/png'> <img src='images/hashtag_system-architecture.png' alt='System Architecture'>");
 
     $("#cassiopeia_constraints_small").html("<source srcset='images/cassiopeia_constraints_small.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_small.png' type='image/png'> <img src='images/cassiopeia_constraints_small.png' alt='Small-Sized Habitat'></img>");
-    $("#cassiopeia_constraints_slow").html("<source srcset='images/cassiopeia_constraints_slow.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_slow.png' type='image/png'> <img src='images/cassiopeia_constraints_slow.png' alt='Slow Internet Connection'>");  
+    $("#cassiopeia_constraints_slow").html("<source srcset='images/cassiopeia_constraints_slow.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_slow.png' type='image/png'> <img src='images/cassiopeia_constraints_slow.png' alt='Slow Internet Connection'>");
     $("#cassiopeia_constraints_sad").html("<source srcset='images/cassiopeia_constraints_sad.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_sad.png' type='image/png'> <img src='images/cassiopeia_constraints_sad.png' alt='Pronity to Mental Distress'>");
     $("#cassiopeia_constraints_lab").html("<source srcset='images/cassiopeia_constraints_lab.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_lab.png' type='image/png'> <img src='images/cassiopeia_constraints_lab.png' alt='Complex Laboratory Tasks'></img>");
-    $("#cassiopeia_system-architecture").html("<source srcset='images/cassiopeia_system-architecture.webp' type='image/webp'> <source srcset='images/cassiopeia_system-architecture.png' type='image/png'> <img src='images/cassiopeia_system-architecture.png' alt='System Architecture'>");  
+    $("#cassiopeia_system-architecture").html("<source srcset='images/cassiopeia_system-architecture.webp' type='image/webp'> <source srcset='images/cassiopeia_system-architecture.png' type='image/png'> <img src='images/cassiopeia_system-architecture.png' alt='System Architecture'>");
 
 }
 

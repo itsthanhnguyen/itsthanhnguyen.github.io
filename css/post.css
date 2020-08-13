@@ -204,7 +204,6 @@ nav > div > span:nth-child(n + 2) {
 	justify-content: space-between;
 }
 
-
 #cassiopeia-ct {
 	top: -26rem;
 }
@@ -267,10 +266,10 @@ nav > div > span:nth-child(n + 2) {
 	}
 
 	.prev-next-posts > a:nth-child(1) {
-		margin-left: 0
+		margin-left: 0;
 	}
 
 	.prev-next-posts > a:nth-child(2) {
-		margin-right: 0
+		margin-right: 0;
 	}
 }

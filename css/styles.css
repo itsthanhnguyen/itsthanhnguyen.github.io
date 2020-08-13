@@ -8,7 +8,7 @@
 	--font-color: #5b5b5b;
 	--bg-color: #fbfbfb;
 	--logo-color: ;
-    --nav-bg-color: rgba(245, 245, 245, 0.9);
+	--nav-bg-color: rgba(245, 245, 245, 0.9);
 	--grey-1: #c5cbd3;
 	--grey-2: #f5f5f5;
 	--cassiopeia: url("../images/cassiopeia_featured-image.jpg");
@@ -33,9 +33,9 @@
 	--indigo: #6d466b;
 	--header-color: #fbfbfb;
 	--font-color: #cccccc;
-	--bg-color: rgb(21,21,21);
+	--bg-color: rgb(21, 21, 21);
 	--logo-color: invert(99%) sepia(96%) saturate(0%) hue-rotate(104deg);
-    --nav-bg-color: rgba(21, 21, 21, 0.9);
+	--nav-bg-color: rgba(21, 21, 21, 0.9);
 	--grey-1: #c5cbd3;
 	--grey-2: #5b5b5b;
 	--cassiopeia: url("../images/cassiopeia_featured-image-dark.jpg");
@@ -63,7 +63,7 @@ html.no-webp {
 	overflow-x: hidden;
 }
 
-html.webp  {
+html.webp {
 	background-image: var(--background-webp);
 	background-position: left top;
 	background-size: auto 100vh;
@@ -100,10 +100,9 @@ h2 {
 	font-family: "Jost", sans-serif;
 	font-size: 2.5rem;
 	font-weight: 400;
-    letter-spacing: 0;
+	letter-spacing: 0;
 	margin: 0;
 	color: var(--header-color);
-
 }
 
 hr {
@@ -115,7 +114,7 @@ hr {
 	display: flex;
 }
 
-.icons{
+.icons {
 	display: table;
 	width: 100%;
 }
@@ -124,7 +123,6 @@ hr {
 	display: table-cell;
 	max-width: 10rem;
 	text-align: center;
-
 }
 
 h3 {
@@ -141,20 +139,20 @@ h4 {
 	font-size: 1rem;
 	font-weight: 600;
 	text-transform: uppercase;
-    letter-spacing: 0.15rem;
+	letter-spacing: 0.15rem;
 	line-height: 1.5rem;
 	color: var(--header-color);
 }
 
 section {
 	min-height: 85vh;
-    text-align: right;
+	text-align: right;
 }
 
 footer {
-    margin-bottom: 5rem;
-    text-align: center;
-    padding: 3rem;
+	margin-bottom: 5rem;
+	text-align: center;
+	padding: 3rem;
 }
 
 button {
@@ -188,28 +186,30 @@ button:hover {
 }
 
 .mobile {
-    display: none;
+	display: none;
 }
 
-.hyperlink, .hyperlink-2 {
+.hyperlink,
+.hyperlink-2 {
 	font-family: "Jost", sans-serif;
 	font-size: 1rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 0.15rem;
-    line-height: 1.5rem;
-    white-space: nowrap;
+	line-height: 1.5rem;
+	white-space: nowrap;
 	color: var(--font-color);
-    position: relative;
-    cursor: pointer;
+	position: relative;
+	cursor: pointer;
 	transition: 0.25s width ease-in-out;
 	-webkit-transition: 0.25s width ease-in-out;
 	-moz-transition: 0.25s width ease-in-out;
 	-o-transition: 0.25s width ease-in-out;
 }
 
-.hyperlink::after, .hyperlink-2::after {
+.hyperlink::after,
+.hyperlink-2::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -224,7 +224,8 @@ button:hover {
 	-o-transition: 0.25s width ease-in-out;
 }
 
-.hyperlink:visited, .hyperlink-2:visited {
+.hyperlink:visited,
+.hyperlink-2:visited {
 	color: var(--font-color);
 }
 
@@ -235,7 +236,8 @@ button:hover {
 	color: var(--header-color);
 }
 
-.hyperlink:hover::after, .hyperlink-2:hover::after {
+.hyperlink:hover::after,
+.hyperlink-2:hover::after {
 	width: min(100%, 4.5rem);
 	opacity: 1;
 }
@@ -261,7 +263,7 @@ button:hover {
 }
 
 .icon-dribbble {
-	margin-left: 0
+	margin-left: 0;
 }
 
 .switch {
@@ -283,7 +285,8 @@ button:hover {
 	z-index: 10;
 }
 
-.switch:hover, .scroll-to-top:hover{
+.switch:hover,
+.scroll-to-top:hover {
 	opacity: 1;
 }
 
@@ -297,101 +300,100 @@ button:hover {
 }
 
 .no-webp #cassiopeia {
-    background: var(--cassiopeia);
-    background-size: cover;
-    background-position: top center;
+	background: var(--cassiopeia);
+	background-size: cover;
+	background-position: top center;
 }
 
 .no-webp #hashtag {
-    background: var(--hashtag);
-    background-size: cover;
-    background-position: top center;
+	background: var(--hashtag);
+	background-size: cover;
+	background-position: top center;
 }
 
 .no-webp #gtr {
-    background: var(--gtr);
-    background-size: cover;
-    background-position: top center;
+	background: var(--gtr);
+	background-size: cover;
+	background-position: top center;
 }
 
 .no-webp #cxtt {
-    background: var(--cxtt);
-    background-size: cover;
-    background-position: top center;
+	background: var(--cxtt);
+	background-size: cover;
+	background-position: top center;
 }
 
-
 .webp #cassiopeia {
-    background: var(--cassiopeia-webp);
-    background-size: cover;
-    background-position: top center;
+	background: var(--cassiopeia-webp);
+	background-size: cover;
+	background-position: top center;
 }
 
 .webp #hashtag {
-    background: var(--hashtag-webp);
-    background-size: cover;
-    background-position: top center;
+	background: var(--hashtag-webp);
+	background-size: cover;
+	background-position: top center;
 }
 
 .webp #gtr {
-    background: var(--gtr-webp);
-    background-size: cover;
-    background-position: top center;
+	background: var(--gtr-webp);
+	background-size: cover;
+	background-position: top center;
 }
 
 .webp #cxtt {
-    background: var(--cxtt-webp);
-    background-size: cover;
-    background-position: top center;
+	background: var(--cxtt-webp);
+	background-size: cover;
+	background-position: top center;
 }
 
-
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
 	hr {
 		border: 1px solid var(--grey-2);
 		margin: 0 1rem;
 	}
 
-    .desktop{
-        display: none !important;
-    }
-
-    .mobile {
-        display: inline;
+	.desktop {
+		display: none !important;
 	}
 
-	.switch, .scroll-to-top {
-		right: 1.5rem
+	.mobile {
+		display: inline;
+	}
+
+	.switch,
+	.scroll-to-top {
+		right: 1.5rem;
 	}
 
 	.switch {
-		top: 1.5rem
+		top: 1.5rem;
 	}
 
 	.card {
-        width: 100vw;
-        min-height: 30vh !important;
-    }
-
-    .card > div {
-        width: 100vw;
-        vertical-align: bottom !important;
-        padding: 1rem;
-    }
-
-    .card > div > br {
-        display: none;
-    }
-
-    .card > div > h2 {
-        font-size: 1.5rem;
-    }
-
-    .card > div > h4 {
-        font-size: 0.75rem;
-        margin: 0;
+		width: 100vw;
+		min-height: 30vh !important;
 	}
-	
+
+	.card > div {
+		width: 100vw;
+		vertical-align: bottom !important;
+		padding: 1rem;
+	}
+
+	.card > div > br {
+		display: none;
+	}
+
+	.card > div > h2 {
+		font-size: 1.5rem;
+	}
+
+	.card > div > h4 {
+		font-size: 0.75rem;
+		margin: 0;
+	}
+
 	[class*="icon-"] {
 		font-size: 27px;
 		color: var(--font-color);
@@ -408,59 +410,100 @@ button:hover {
 	}
 
 	.no-webp #cassiopeia {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cassiopeia);
-        background-size: cover;
-        background-position: top center;
-    }
-    
-    .no-webp #hashtag {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--hashtag);
-        background-size: cover;
-        background-position: top center;
-    }
-    
-    .no-webp #gtr {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--gtr);
-        background-size: cover;
-        background-position: top center;
-    }
-    
-    .no-webp #cxtt {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cxtt);
-        background-size: cover;
-        background-position: top center;
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--cassiopeia);
+		background-size: cover;
+		background-position: top center;
 	}
-	
-	.webp #cassiopeia {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cassiopeia-webp);
-        background-size: cover;
-        background-position: top center;
-    }
-    
-    .webp #hashtag {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--hashtag-webp);
-        background-size: cover;
-        background-position: top center;
-    }
-    
-    .webp #gtr {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--gtr-webp);
-        background-size: cover;
-        background-position: top center;
-    }
-    
-    .webp #cxtt {
-        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cxtt-webp);
-        background-size: cover;
-        background-position: top center;
-    }
 
-	#cassiopeia > div, #gtr > div {
+	.no-webp #hashtag {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--hashtag);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.no-webp #gtr {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--gtr);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.no-webp #cxtt {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--cxtt);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.webp #cassiopeia {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--cassiopeia-webp);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.webp #hashtag {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--hashtag-webp);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.webp #gtr {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--gtr-webp);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.webp #cxtt {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--cxtt-webp);
+		background-size: cover;
+		background-position: top center;
+	}
+
+	#cassiopeia > div,
+	#gtr > div {
 		text-align: left;
 	}
 
-	#hashtag > div, #cxtt > div {
+	#hashtag > div,
+	#cxtt > div {
 		text-align: right;
 	}
-    
 }
