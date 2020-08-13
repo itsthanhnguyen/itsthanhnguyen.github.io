@@ -315,7 +315,7 @@ button:hover {
 }
 
 .no-webp #cxtt {
-    background: var(--cxtt-webp);
+    background: var(--cxtt);
     background-size: cover;
     background-position: top center;
 }
