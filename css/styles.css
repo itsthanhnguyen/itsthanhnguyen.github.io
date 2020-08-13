@@ -104,13 +104,6 @@ hr {
 
 }
 
-.colored-icon{
-    max-height: 10rem;
-    max-width: 10rem;
-    line-height: 3.75rem;
-	color: var(--header-color);
-}
-
 h3 {
 	font-family: "Jost", sans-serif;
 	font-size: 2rem;

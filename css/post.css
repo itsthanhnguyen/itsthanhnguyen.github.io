@@ -172,7 +172,10 @@ nav > div > span:nth-child(n + 2) {
 .colored-icon {
 	max-height: 10rem;
 	max-width: 10rem;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 .scroll-to-top {
 	bottom: 5rem;
 }
