@@ -17,6 +17,12 @@
 	--cxtt: url("../images/cxtt_featured-image.jpg");
 	--background: url("../images/background.png");
 	--me: url("../images/thanh-nguyen.jpg");
+	--cassiopeia-webp: url("../images/cassiopeia_featured-image.webp");
+	--hashtag-webp: url("../images/hashtag_featured-image.webp");
+	--gtr-webp: url("../images/gtr_featured-image.webp");
+	--cxtt-webp: url("../images/cxtt_featured-image.webp");
+	--background-webp: url("../images/background.webp");
+	--me-webp: url("../images/thanh-nguyen.webp");
 }
 
 [data-theme="dark"] {
@@ -38,10 +44,27 @@
 	--cxtt: url("../images/cxtt_featured-image-dark.jpg");
 	--background: url("../images/background-dark.png");
 	--me: url("../images/thanh-nguyen-dark.jpg");
+	--cassiopeia-webp: url("../images/cassiopeia_featured-image-dark.webp");
+	--hashtag-webp: url("../images/hashtag_featured-image-dark.webp");
+	--gtr-webp: url("../images/gtr_featured-image-dark.webp");
+	--cxtt-webp: url("../images/cxtt_featured-image-dark.webp");
+	--background-webp: url("../images/background-dark.webp");
+	--me-webp: url("../images/thanh-nguyen-dark.webp");
 }
 
-html {
+html.no-webp {
 	background-image: var(--background);
+	background-position: left top;
+	background-size: auto 100vh;
+	background-attachment: fixed;
+	font-size: 18px;
+	background-color: var(--bg-color);
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+html.webp  {
+	background-image: var(--background-webp);
 	background-position: left top;
 	background-size: auto 100vh;
 	background-attachment: fixed;
@@ -273,29 +296,55 @@ button:hover {
 	-webkit-filter: var(--logo-color);
 }
 
-#cassiopeia {
+.no-webp #cassiopeia {
     background: var(--cassiopeia);
     background-size: cover;
     background-position: top center;
 }
 
-#hashtag {
+.no-webp #hashtag {
     background: var(--hashtag);
     background-size: cover;
     background-position: top center;
 }
 
-#gtr {
+.no-webp #gtr {
     background: var(--gtr);
     background-size: cover;
     background-position: top center;
 }
 
-#cxtt {
-    background: var(--cxtt);
+.no-webp #cxtt {
+    background: var(--cxtt-webp);
     background-size: cover;
     background-position: top center;
 }
+
+
+.webp #cassiopeia {
+    background: var(--cassiopeia-webp);
+    background-size: cover;
+    background-position: top center;
+}
+
+.webp #hashtag {
+    background: var(--hashtag-webp);
+    background-size: cover;
+    background-position: top center;
+}
+
+.webp #gtr {
+    background: var(--gtr-webp);
+    background-size: cover;
+    background-position: top center;
+}
+
+.webp #cxtt {
+    background: var(--cxtt-webp);
+    background-size: cover;
+    background-position: top center;
+}
+
 
 @media only screen and (max-width: 768px) { 
 	hr {
@@ -358,26 +407,50 @@ button:hover {
 		margin-left: 0;
 	}
 
-	#cassiopeia {
+	.no-webp #cassiopeia {
         background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cassiopeia);
         background-size: cover;
         background-position: top center;
     }
     
-    #hashtag {
+    .no-webp #hashtag {
         background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--hashtag);
         background-size: cover;
         background-position: top center;
     }
     
-    #gtr {
+    .no-webp #gtr {
         background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--gtr);
         background-size: cover;
         background-position: top center;
     }
     
-    #cxtt {
+    .no-webp #cxtt {
         background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cxtt);
+        background-size: cover;
+        background-position: top center;
+	}
+	
+	.webp #cassiopeia {
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cassiopeia-webp);
+        background-size: cover;
+        background-position: top center;
+    }
+    
+    .webp #hashtag {
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--hashtag-webp);
+        background-size: cover;
+        background-position: top center;
+    }
+    
+    .webp #gtr {
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--gtr-webp);
+        background-size: cover;
+        background-position: top center;
+    }
+    
+    .webp #cxtt {
+        background: linear-gradient(0deg, var(--nav-bg-color) 0%, rgba(0,0,0,0) 50%), var(--cxtt-webp);
         background-size: cover;
         background-position: top center;
     }

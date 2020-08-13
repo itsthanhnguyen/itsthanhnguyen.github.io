@@ -71,14 +71,23 @@
 }
 
 #photo-me {
-    background: var(--me);
     width: 40vw;
+    
+}
+
+.no-webp #photo-me {
+    background: var(--me);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; 
-
 }
 
+.webp #photo-me {
+    background: var(--me-webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
 
 @media only screen and (max-width: 768px) {
     footer {

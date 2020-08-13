@@ -21,6 +21,8 @@
     <link rel="manifest" href="site.webmanifest">  
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+
 </head>
 
 <header>
@@ -81,31 +83,19 @@
                     mission.</p>
                 <div class="icons">
                     <div>
-                        <img class="colored-icon light-img" src="images/cassiopeia_constraints_small.png"
-                            alt="Small-Sized Habitat">
-                            <img class="colored-icon dark-img" src="images/cassiopeia_constraints_small-dark.png"
-                            alt="Small-Sized Habitat">
+                        <picture id="cassiopeia_constraints_small"></picture>
                         <h4>Small-Sized Habitat</h4>
                     </div>
                     <div>
-                        <img class="colored-icon light-img" src="images/cassiopeia_constraints_slow.png"
-                            alt="Slow Internet Connection">
-                        <img class="colored-icon dark-img" src="images/cassiopeia_constraints_slow-dark.png"
-                            alt="Slow Internet Connection">
+                        <picture id="cassiopeia_constraints_slow"></picture>
                         <h4>Slow Internet Connection</h4>
                     </div>
                     <div>
-                        <img class="colored-icon light-img" src="images/cassiopeia_constraints_sad.png"
-                            alt="Pronity to Mental Distress">
-                        <img class="colored-icon dark-img" src="images/cassiopeia_constraints_sad-dark.png"
-                            alt="Pronity to Mental Distress">
+                        <picture id="cassiopeia_constraints_sad"></picture>
                         <h4>Pronity to Mental Distress</h4>
                     </div>
                     <div>
-                        <img class="colored-icon light-img" src="images/cassiopeia_constraints_lab.png"
-                            alt="Complex Laboratory Tasks">
-                            <img class="colored-icon dark-img" src="images/cassiopeia_constraints_lab-dark.png"
-                            alt="Complex Laboratory Tasks">
+                        <picture id="cassiopeia_constraints_lab"></picture>
                         <h4>Complex Laboratory Tasks</h4>
                     </div>
                 </div>
@@ -145,8 +135,7 @@
                     chosen experiment. The interaction channels are verbal input, visual and auditory output. </p>
                 <p>The defined system comprises 4 vital components: the speech recognition module, the command execution
                     module, the text-to-speech module, and the graphical user interface.</p>
-                <img src="images/cassiopeia_system-architecture.png" alt="System Design" class="light-img">
-                <img src="images/cassiopeia_system-architecture-dark.png" alt="System Design" class="dark-img">
+                <picture id="cassiopeia_system-architecture"></picture>
                 <p>Central to our system is SNIPS – a freemium AI-powered on-device speech recognition service (now
                     acquired by Sonos). This module requires some prior training to recognize what’s been said and its
                     intentions, then triggers one or more applets (within the command execution module) mapped to those
@@ -172,7 +161,12 @@
                     crew members through the lengthy lab procedures. I figured out how lucky I was as the chosen use
                     case was more of a planned program than a free spontaneous talk, thus, it’s easier to predict which
                     actions will take place at a certain point in the user flow.</p>
-                <img src="images/cassiopeia_user-flow.png" alt="User Flow">
+                <picture>
+                    <source srcset='images/cassiopeia_user-flow.webp' type='image/webp'>
+                    <source srcset='images/cassiopeia_user-flow.png' type='image/png'>
+                    <img src="images/cassiopeia_user-flow.png" alt="User Flow">
+                </picture>
+                
                 <p>To maintain dialog consistency, we defined a couple of guidelines for the voice interface.</p>
                 <ul>
                     <li>The dialog should work independently from the GUI, i.e. the crew members should be able to carry
@@ -186,7 +180,12 @@
                     </li>
                     <li>Messages should be clear and as compact as possible which follow this order:</li>
                 </ul>
-                <img src="images/cassiopeia_message-structure.png" alt="Message Structure">
+                <picture>
+                    <source srcset='images/cassiopeia_message-structure.webp' type='image/webp'>
+                    <source srcset='images/cassiopeia_message-structure.png' type='image/png'>
+                    <img src="images/cassiopeia_message-structure.png" alt="Message Structure">
+                </picture>
+                
                 <p>You may now ask yourself why such important information like Content was pushed to the very end of
                     the message. The reason is actually simple: so that the crew member can remember it better! When the
                     short-term memory can’t hold up to the amount of information going in anymore, it becomes a
@@ -197,7 +196,12 @@
             <hr>
             <section id="interface-design">
                 <h2>Interface Design</h2>
-                <img src="images/cassiopeia_ui-preview.png" alt="UI Preview" class="img-halfwidth">
+                <picture class="img-halfwidth">
+                    <source srcset='images/cassiopeia_ui-preview.webp' type='image/webp'>
+                    <source srcset='images/cassiopeia_ui-preview.png' type='image/png'>
+                    <img src="images/cassiopeia_ui-preview.png" alt="UI Preview">
+                </picture>
+                
                 <p>The GUI serves as a complementary output channel which, long story short, shows the crew members
                     what’s being said through the auditory output channel. It aims at solving the complications of the
                     conversational interface such as:</p>
@@ -218,7 +222,11 @@
                     commands given to the system compared to the version coming without the GUI. All participants who
                     didn’t get the GUI shared that a GUI would have eased out the struggles they met during the test.
                 </p>
-                <img src="images/cassiopeia_help-bubble.gif" alt="UI Element: Help Bubble" class="img-halfwidth">
+                <picture class="img-halfwidth">
+                    <source srcset='images/cassiopeia_help-bubble.webp' type='image/webp'>
+                    <source srcset='images/cassiopeia_help-bubble.gif' type='image/gif'>
+                    <img src="images/cassiopeia_help-bubble.gif" alt="UI Element: Help Bubble">
+                </picture>
                 <p>The hint-bubbles, however, seemed to give the test subjects a false restriction while giving
                     commands: they tended to wait until the hint appeared and say exactly what the hint tells them to
                     say, even though the system was capable of understanding more than what the hints showed. As a
