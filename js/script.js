@@ -244,6 +244,22 @@ $(document).ready(function () {
         switchTheme();
     });
 
+    //Logo
+
+    $(".logo").hover(function(){
+        $(this).css({
+            "transform": "rotate(0deg) scale(1)",
+            "-webkit-transform": "rotate(0deg) scale(1)",
+            "opacity": "1"
+        });
+    }, function(){
+        $(this).css({
+            "transform": "rotate(4deg) scale(1)",
+            "-webkit-transform": "rotate(4deg) scale(1)",
+            "opacity": "0.5"
+        });
+    });
+
     //Scroll
     $(".scroll-to-top").click(function (e) {
         $('html,body').animate({ scrollTop: 0 }, 0);
@@ -269,6 +285,19 @@ window.onscroll = function () {
         $(".scroll-to-top").css({
             "transform": "scale(1)",
             "opacity": "1"
+        });
+    }
+    if (currentScrollPos >= prevScrollpos){
+        $(".logo").css({
+            "transform": "rotate(-10deg) scale(0.7)",
+            "-webkit-transform": "rotate(-10deg) scale(0.7)",
+            "opacity": "0"
+        });
+    } else {
+        $(".logo").css({
+            "transform": "rotate(4deg) scale(1)",
+            "-webkit-transform": "rotate(4deg) scale(1)",
+            "opacity": "0.5"
         });
     }
     prevScrollpos = currentScrollPos;
