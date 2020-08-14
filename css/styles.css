@@ -411,14 +411,25 @@ button:hover {
 	background-position: center center;
 }
 
+
+@media only screen and (max-width: 768px) {
+	.desktop {
+		display: none !important;
+	}
+
+	.scroll-to-top{
+		border-radius: 9px;
+		right: 18px;
+		bottom: 72px;
+	}
+}
+
 @media only screen and (max-width: 930px) {
 	hr {
 		border: 1px solid var(--font-color);
 		margin: 0 1rem;
 		opacity: 0.1;
 	}
-
-	
 
 	.mobile {
 		display: inline;
@@ -571,8 +582,3 @@ button:hover {
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.desktop {
-		display: none !important;
-	}
-}
