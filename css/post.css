@@ -19,50 +19,12 @@ section {
 	margin: 0 auto;
 }
 
-nav {
-	z-index: 10;
-	padding: 0 18px;
-	width: 270px;
-	height: auto;
-	display: flex;
-	justify-content: space-between;
-	position: fixed;
-	bottom: 18px;
-	left: 50%;
-    transform: translate(-50%, 0);
-	border-radius: 90px;
-	background-color: var(--nav-bg-color);
-	backdrop-filter: blur(30px) saturate(125%);
-	-webkit-backdrop-filter: blur(30px) saturate(125%);
-}
-
-nav > div > a > img {
-	width: 36px;
-	padding: 9px 0;
-}
-
-nav > div > [class*="icon"] {
-	font-size: 22.5px;
-	color: var(--grey-1);
-	padding: 18px 9px 18px 0;
-	margin-left: 0 !important;
-	cursor: pointer;
-}
-
-nav > div > .icon-font-size-1 {
-	color: var(--header-color);
-}
-
 .navigation-flyout {
 	display: none;
 }
 
 .icon-font-size-1 {
 	color: var(--font-color);
-}
-
-nav > div > [class*="icon"]:nth-child(n + 2) {
-	padding: 9px;
 }
 
 .flex {
@@ -176,6 +138,41 @@ nav > div > [class*="icon"]:nth-child(n + 2) {
 	font-size: 18px;
 }
 
+
+.scroll-to-top {
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	z-index: 10;
+	padding: 0;
+	font-size: 22.5px;
+	opacity: 0;
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	border-radius: 90px;
+	background-color: var(--nav-bg-color);
+	backdrop-filter: blur(30px) saturate(125%);
+	-webkit-backdrop-filter: blur(30px) saturate(125%);
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+	opacity: 0;
+}
+
+.scroll-to-top > [class*="icon"] {
+	font-size: 22.5px;
+	color: var(--grey-1);
+	padding: 18px;
+	margin-left: 0 !important;
+	cursor: pointer;
+}
+
+.scroll-to-top > [class*="icon"]:hover {
+	opacity: 1;
+	color: var(--header-color);
+}
+
 @media only screen and (max-width: 930px) {
 	section {
 		padding: 3rem 1rem;
@@ -242,6 +239,10 @@ nav > div > [class*="icon"]:nth-child(n + 2) {
 	.prev-next-posts > a:nth-child(2) {
 		margin-right: 0;
 	}
+
+	.scroll-to-top {
+		right: 27px;
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -255,13 +256,9 @@ nav > div > [class*="icon"]:nth-child(n + 2) {
 		margin-right: auto;
 	}
 
-	nav {
-		padding: 0 36px;
-		width: calc(100vw - 72px);
-		bottom: 0;
-		border-radius: 0px;
-		background-color: var(--nav-bg-color);
-		backdrop-filter: blur(30px) saturate(125%);
-		-webkit-backdrop-filter: blur(30px) saturate(125%);
+	.scroll-to-top{
+		border-radius: 9px;
+		right: 18px;
+		bottom: 72px;
 	}
 }
