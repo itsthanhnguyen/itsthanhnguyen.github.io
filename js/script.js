@@ -1,5 +1,5 @@
 function expandNav() {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 930) {
         $(".navigation-flyout > ol").css({
             "visibility": "visible"
         });
@@ -18,14 +18,14 @@ function expandNav() {
     } else {
         $(".content-table").css({
             "transform": "translateX(0rem)",
-            "margin-right": "0rem"
+            "margin-left": "0"
         });
-
+        
     }
 }
 
 function collapseNav() {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 930) {
         $(".navigation-flyout > ol").css({
             "visibility": "hidden"
         });
@@ -43,14 +43,14 @@ function collapseNav() {
         })
     } else {
         $(".content-table").css({
-            "transform": "translateX(19rem)",
-            "margin-right": "-19rem"
+            "transform": "translateX(-" + $(".content-table").outerWidth(true) + "px)",
+            "margin-left": "-" + $(".content-table").outerWidth(true) + "px"
         });
     }
 }
 
 $(document).ready(function () {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 930) {
         var navCollapsed = true;
     } else {
         var navCollapsed = false;
@@ -64,6 +64,7 @@ $(document).ready(function () {
             navCollapsed = true;
         }
     });
+
     $(".navigation-flyout > ol > li").click(function (e) {
         if (!navCollapsed) {
             collapseNav()
@@ -144,7 +145,7 @@ $(document).ready(function () {
 
 // Transition
 $(document).ready(function () {
-    if ($(window).width() <= 768 && window.location.href == "https://itsthanhnguyen.github.io/") {
+    if ($(window).width() <= 930 && window.location.href == "https://itsthanhnguyen.github.io/") {
         $(".card").click(function (e) {
             var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
             $('html, body').animate({
@@ -191,7 +192,7 @@ if (savedColorScheme) {
     } catch (error) {
         console.log(error);
     }
-    
+
 }
 
 function switchTheme() {

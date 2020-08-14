@@ -15,6 +15,7 @@ section {
 	text-align: left;
 	padding: 3rem;
 	min-height: auto;
+	max-width: 768px;
 }
 
 nav {
@@ -111,6 +112,14 @@ nav > div > span:nth-child(n + 2) {
 	display: flex;
 }
 
+.content {
+	margin: 0 auto;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+}
+
 .content-table {
 	width: 25vw;
 	padding: 3rem;
@@ -159,13 +168,18 @@ nav > div > span:nth-child(n + 2) {
 
 .icons > div {
 	display: table-cell;
-	max-width: 10rem;
 	text-align: center;
 }
 
-.colored-icon {
-	max-height: 10rem;
+.icons > div > div {
 	max-width: 10rem;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.colored-icon {
+	max-height: 3.5rem;
+	max-width: 3.5rem;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -212,10 +226,11 @@ nav > div > span:nth-child(n + 2) {
 	top: -40rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 930px) {
 	section {
 		padding: 3rem 1rem;
 		width: calc(100vw - 2rem);
+		max-width: none;
 	}
 
 	footer {
@@ -248,16 +263,6 @@ nav > div > span:nth-child(n + 2) {
 		background-position: top right;
 	}
 
-	.icons {
-		display: inline-block;
-	}
-
-	.icons > div {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
 	.prev-next-posts {
 		text-align: center;
 		display: block;
@@ -271,5 +276,17 @@ nav > div > span:nth-child(n + 2) {
 
 	.prev-next-posts > a:nth-child(2) {
 		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.icons {
+		display: inline-block;
+	}
+
+	.icons > div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

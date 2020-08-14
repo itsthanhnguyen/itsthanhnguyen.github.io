@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam&family=Jost:wght@400;600&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;600&family=Jost:wght@400;600&display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/post.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -68,7 +68,29 @@
     </div>
 
     <div class="flex">
-        <div>
+        <div class="content-table desktop" id="cassiopeia-ct">
+            <div>
+                <h4>tl;dr:</h4>
+                <p>We designed and developed Cassiopeia – an intelligent lab assistant for extraterrestrial missions.
+                </p>
+            </div>
+            <div>
+                <h4>Roles:</h4>
+                <p>UI & UX Designer</p>
+                <p>Middleware & Back-end Developer</p>
+                <p>Project Co-Manager</p>
+            </div>
+            <ol>
+                <li onclick="location.href='#development-process'" class="hyperlink">Dev. Process</li>
+                <li onclick="location.href='#problem-statement'" class="hyperlink">Problem Statement</li>
+                <li onclick="location.href='#core-user-needs'" class="hyperlink">Core User Needs</li>
+                <li onclick="location.href='#system-design'" class="hyperlink">System Design</li>
+                <li onclick="location.href='#user-flow'" class="hyperlink">User Flow</li>
+                <li onclick="location.href='#interface-design'" class="hyperlink">Interface Design</li>
+                <li onclick="location.href='#key-takeaways'" class="hyperlink">Key Takeaways</li>
+            </ol>
+        </div>
+        <div class="content">
             <section id="development-process">
                 <h2>Development Process</h2>
                 <br>
@@ -83,20 +105,24 @@
                     mission.</p>
                 <div class="icons">
                     <div>
-                        <picture id="cassiopeia_constraints_small"></picture>
-                        <h4>Small-Sized Habitat</h4>
+                        <div>
+                            <picture id="cassiopeia_constraints_small"></picture>
+                            <h4>Small-Sized Habitat</h4>
+                        </div>
+                        <div>
+                            <picture id="cassiopeia_constraints_slow"></picture>
+                            <h4>Slow Internet Connection</h4>
+                        </div>
                     </div>
                     <div>
-                        <picture id="cassiopeia_constraints_slow"></picture>
-                        <h4>Slow Internet Connection</h4>
-                    </div>
-                    <div>
-                        <picture id="cassiopeia_constraints_sad"></picture>
-                        <h4>Pronity to Mental Distress</h4>
-                    </div>
-                    <div>
-                        <picture id="cassiopeia_constraints_lab"></picture>
-                        <h4>Complex Laboratory Tasks</h4>
+                        <div>
+                            <picture id="cassiopeia_constraints_sad"></picture>
+                            <h4>Pronity to Mental Distress</h4>
+                        </div>
+                        <div>
+                            <picture id="cassiopeia_constraints_lab"></picture>
+                            <h4>Complex Laboratory Tasks</h4>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -136,18 +162,21 @@
                 <p>The defined system comprises 4 vital components: the speech recognition module, the command execution
                     module, the text-to-speech module, and the graphical user interface.</p>
                 <picture id="cassiopeia_system-architecture"></picture>
-                <p>Central to our system is SNIPS – a freemium AI-powered on-device speech recognition service (now
+                <p>Central to our system is <b>SNIPS</b> – a freemium AI-powered on-device speech recognition service (now
                     acquired by Sonos). This module requires some prior training to recognize what’s been said and its
                     intentions, then triggers one or more applets (within the command execution module) mapped to those
-                    intentions. In the current use case, the applets are in charge of the information communication
+                    intentions.</p>
+                <p>In the current use case, the applets are in charge of the information communication
                     channel between the database server (also within the command execution module), the text-to-speech
                     module, and the graphical user interface. </p>
                 <p>As we tested the system, we discovered that SNIPS did a good job in recognizing phonology (sound of
                     the message), syntaxes (structure of the message), and semantics (logical meanings the message,
                     regardless of context), but it didn’t show much supports in pragmatics (contextual meanings of the
-                    message). For example, by saying “I’m done” at the first step of an experiment, the crew members
+                    message). 
+                <blockquote>For example, by saying “I’m done” at the first step of an experiment, the crew members
                     intend to go on to the second step; however, at the end of an experiment, that could mean that they
-                    want to successfully wrap up the experiment. Having discovered that, we separated the user flow into
+                    want to successfully wrap up the experiment. </blockquote> 
+                <p>Having discovered that, we separated the user flow into
                     states, developed a state-machine accordingly, and applied it to the applets, so that SNIPS
                     “understands” the real intention of a command based on the context.</p>
                 <p>The complementary GUI is a web-based application which acts as a pure visual output channel, i.e. no
@@ -264,28 +293,6 @@
                     display where UI design and the quality of the display are important). This includes the pace of the
                     conversation, accent, intonation, pauses and stops, and how “natural” the speech engine is.</p>
             </section>
-        </div>
-        <div class="content-table desktop" id="cassiopeia-ct">
-            <div>
-                <h4>tl;dr:</h4>
-                <p>We designed and developed Cassiopeia – an intelligent lab assistant for extraterrestrial missions.
-                </p>
-            </div>
-            <div>
-                <h4>Roles:</h4>
-                <p>UI & UX Designer</p>
-                <p>Middleware & Back-end Developer</p>
-                <p>Project Co-Manager</p>
-            </div>
-            <ol>
-                <li onclick="location.href='#development-process'" class="hyperlink">Dev. Process</li>
-                <li onclick="location.href='#problem-statement'" class="hyperlink">Problem Statement</li>
-                <li onclick="location.href='#core-user-needs'" class="hyperlink">Core User Needs</li>
-                <li onclick="location.href='#system-design'" class="hyperlink">System Design</li>
-                <li onclick="location.href='#user-flow'" class="hyperlink">User Flow</li>
-                <li onclick="location.href='#interface-design'" class="hyperlink">Interface Design</li>
-                <li onclick="location.href='#key-takeaways'" class="hyperlink">Key Takeaways</li>
-            </ol>
         </div>
     </div>
     <div class="prev-next-posts">
