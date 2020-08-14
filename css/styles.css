@@ -295,7 +295,9 @@ button:hover {
 	right: 3rem;
 	cursor: pointer;
 	font-size: 1.5rem;
-	opacity: 0.5;
+	opacity: 0;
+	transform: scale(0);
+	-webkit-transform: scale(0);
 	z-index: 10;
 }
 
@@ -304,8 +306,28 @@ button:hover {
 	opacity: 1;
 }
 
-.dark-img {
-	display: none;
+.card {
+	text-align: center;
+	min-height: 35rem;
+	z-index: 2;
+	vertical-align: middle;
+	height: 100%;
+	top: 0;
+	display: table;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+}
+
+.card > div {
+	width: 50vw;
+	display: table-cell;
+	vertical-align: middle;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
 }
 
 .logo {
@@ -316,49 +338,49 @@ button:hover {
 .no-webp #cassiopeia {
 	background: var(--cassiopeia);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .no-webp #hashtag {
 	background: var(--hashtag);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .no-webp #gtr {
 	background: var(--gtr);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .no-webp #cxtt {
 	background: var(--cxtt);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .webp #cassiopeia {
 	background: var(--cassiopeia-webp);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .webp #hashtag {
 	background: var(--hashtag-webp);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .webp #gtr {
 	background: var(--gtr-webp);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 .webp #cxtt {
 	background: var(--cxtt-webp);
 	background-size: cover;
-	background-position: top center;
+	background-position: center center;
 }
 
 @media only screen and (max-width: 930px) {
@@ -432,7 +454,7 @@ button:hover {
 			),
 			var(--cassiopeia);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.no-webp #hashtag {
@@ -443,7 +465,7 @@ button:hover {
 			),
 			var(--hashtag);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.no-webp #gtr {
@@ -454,7 +476,7 @@ button:hover {
 			),
 			var(--gtr);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.no-webp #cxtt {
@@ -465,7 +487,7 @@ button:hover {
 			),
 			var(--cxtt);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.webp #cassiopeia {
@@ -476,7 +498,7 @@ button:hover {
 			),
 			var(--cassiopeia-webp);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.webp #hashtag {
@@ -487,7 +509,7 @@ button:hover {
 			),
 			var(--hashtag-webp);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.webp #gtr {
@@ -498,7 +520,7 @@ button:hover {
 			),
 			var(--gtr-webp);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	.webp #cxtt {
@@ -509,7 +531,7 @@ button:hover {
 			),
 			var(--cxtt-webp);
 		background-size: cover;
-		background-position: top center;
+		background-position: center center;
 	}
 
 	#cassiopeia > div,

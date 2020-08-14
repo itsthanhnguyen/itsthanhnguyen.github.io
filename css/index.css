@@ -2,30 +2,6 @@
 	width: 100vw;
 }
 
-.card {
-	text-align: center;
-	min-height: 30rem;
-	z-index: 2;
-	vertical-align: middle;
-	height: 100%;
-	top: 0;
-	display: table;
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
-}
-
-.card > div {
-	width: 50vw;
-	display: table-cell;
-	vertical-align: middle;
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
-}
-
 .card:nth-child(2n + 1) > div {
 	left: 0%;
 }

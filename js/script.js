@@ -1,172 +1,3 @@
-function expandNav() {
-    if ($(window).width() <= 930) {
-        $(".navigation-flyout > ol").css({
-            "visibility": "visible"
-        });
-        $(".navigation-flyout").css({
-            "opacity": "1",
-            "z-index": "9"
-        });
-        $('body').css({
-            "overflow": "hidden"
-        });
-        $("nav").css({
-            "background-color": "transparent",
-            "backdrop-filter": " ",
-            "-webkit-backdrop-filter": " "
-        })
-    } else {
-        $(".content-table").css({
-            "transform": "translateX(0rem)",
-            "margin-right": "0"
-        });
-        
-    }
-}
-
-function collapseNav() {
-    if ($(window).width() <= 930) {
-        $(".navigation-flyout > ol").css({
-            "visibility": "hidden"
-        });
-        $(".navigation-flyout").css({
-            "opacity": "0",
-            "z-index": "-10"
-        });
-        $('body').css({
-            "overflow": "auto"
-        });
-        $("nav").css({
-            "background-color": "var(--nav-bg-color)",
-            "backdrop-filter": "blur(30px) saturate(125%)",
-            "-webkit-backdrop-filter": "blur(30px) saturate(125%)"
-        })
-    } else {
-        $(".content-table").css({
-            "transform": "translateX(" + $(".content-table").outerWidth(true) + "px)",
-            "margin-right": - $(".content-table").outerWidth(true) + "px"
-        });
-    }
-}
-
-$(document).ready(function () {
-    if ($(window).width() <= 930) {
-        var navCollapsed = true;
-    } else {
-        var navCollapsed = false;
-    }
-    $(".icon-format_list_numbered").click(function (e) {
-        if (navCollapsed) {
-            expandNav()
-            navCollapsed = false;
-        } else {
-            collapseNav()
-            navCollapsed = true;
-        }
-    });
-
-    $(".navigation-flyout > ol > li").click(function (e) {
-        if (!navCollapsed) {
-            collapseNav()
-            navCollapsed = true;
-        }
-    });
-    $(".icon-font-size-1").click(function (e) {
-        $(":root").css({
-            "font-size": "18px"
-        });
-        $(".icon-font-size-1").css({
-            "color": "var(--header-color)"
-        });
-        $(".icon-font-size-2").css({
-            "color": "var(--grey-1)"
-        });
-        $(".icon-font-size-3").css({
-            "color": "var(--grey-1)"
-        });
-    });
-    $(".icon-font-size-2").click(function (e) {
-        $(":root").css({
-            "font-size": "20px"
-        });
-        $(".icon-font-size-1").css({
-            "color": "var(--grey-1)"
-        });
-        $(".icon-font-size-2").css({
-            "color": "var(--header-color)"
-        });
-        $(".icon-font-size-3").css({
-            "color": "var(--grey-1)"
-        });
-    });
-    $(".icon-font-size-3").click(function (e) {
-        $(":root").css({
-            "font-size": "24px"
-        });
-        $(".icon-font-size-1").css({
-            "color": "var(--grey-1)"
-        });
-        $(".icon-font-size-2").css({
-            "color": "var(--grey-1)"
-        });
-        $(".icon-font-size-3").css({
-            "color": "var(--header-color)"
-        });
-    });
-
-})
-
-
-// Scroll
-
-var prevScrollpos = window.pageYOffset;
-
-window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 500) {
-        $(".scroll-to-top").css({
-            "transform": "scale(0)",
-            "opacity": "0"
-        });
-    } else {
-        $(".scroll-to-top").css({
-            "transform": "scale(1)",
-            "opacity": "0.5"
-        });
-    }
-    prevScrollpos = currentScrollPos;
-}
-
-$(document).ready(function () {
-    $(".scroll-to-top").click(function (e) {
-        $('html,body').animate({ scrollTop: 0 }, 0);
-    });
-});
-
-// Transition
-$(document).ready(function () {
-    if ($(window).width() <= 930 && window.location.href == "https://itsthanhnguyen.github.io/") {
-        $(".card").click(function (e) {
-            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
-            $('html, body').animate({
-                scrollTop: $("#" + $(this)[0].id).offset().top
-            }, 0, function () {
-                window.location.assign(navigateTo);
-            })
-        });
-    } else {
-        $(".card > div > button").click(function (e) {
-            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
-            $('html, body').animate({
-                scrollTop: $("#" + $(this).parents().parents()[0].id).offset().top
-            }, 0, function () {
-                window.location.assign(navigateTo);
-            })
-        });
-    }
-});
-
-
 // Dark light mode switch
 
 var colorScheme;
@@ -251,7 +82,148 @@ function lightMode() {
 
 }
 
+function expandNav() {
+    if ($(window).width() <= 930) {
+        $(".navigation-flyout > ul").css({
+            "visibility": "visible"
+        });
+        $(".navigation-flyout").css({
+            "opacity": "1",
+            "z-index": "9"
+        });
+        $('html').css({
+            "overflow": "hidden"
+        });
+        $("nav").css({
+            "background-color": "transparent",
+            "backdrop-filter": " ",
+            "-webkit-backdrop-filter": " "
+        })
+    } else {
+        $(".content-table").css({
+            "transform": "translateX(0rem)",
+            "margin-right": "0"
+        });
+        
+    }
+}
+
+function collapseNav() {
+    if ($(window).width() <= 930) {
+        $(".navigation-flyout > ul").css({
+            "visibility": "hidden"
+        });
+        $(".navigation-flyout").css({
+            "opacity": "0",
+            "z-index": "-10"
+        });
+        $('html').css({
+            "overflow": "auto"
+        });
+        $("nav").css({
+            "background-color": "var(--nav-bg-color)",
+            "backdrop-filter": "blur(30px) saturate(125%)",
+            "-webkit-backdrop-filter": "blur(30px) saturate(125%)"
+        })
+    } else {
+        $(".content-table").css({
+            "transform": "translateX(" + $(".content-table").outerWidth(true) + "px)",
+            "margin-right": - $(".content-table").outerWidth(true) + "px"
+        });
+    }
+}
+
 $(document).ready(function () {
+    if ($(window).width() <= 930) {
+        var navCollapsed = true;
+    } else {
+        var navCollapsed = false;
+    }
+    $(".icon-format_list_numbered").click(function (e) {
+        if (navCollapsed) {
+            expandNav()
+            navCollapsed = false;
+        } else {
+            collapseNav()
+            navCollapsed = true;
+        }
+    });
+
+    $(".navigation-flyout > ul > li").click(function (e) {
+        if (!navCollapsed) {
+            collapseNav()
+            navCollapsed = true;
+        }
+    });
+    $(".icon-font-size-1").click(function (e) {
+        $(":root").css({
+            "font-size": "18px"
+        });
+        $(".icon-font-size-1").css({
+            "color": "var(--header-color)"
+        });
+        $(".icon-font-size-2").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-3").css({
+            "color": "var(--grey-1)"
+        });
+    });
+    $(".icon-font-size-2").click(function (e) {
+        $(":root").css({
+            "font-size": "20px"
+        });
+        $(".icon-font-size-1").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-2").css({
+            "color": "var(--header-color)"
+        });
+        $(".icon-font-size-3").css({
+            "color": "var(--grey-1)"
+        });
+    });
+    $(".icon-font-size-3").click(function (e) {
+        $(":root").css({
+            "font-size": "24px"
+        });
+        $(".icon-font-size-1").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-2").css({
+            "color": "var(--grey-1)"
+        });
+        $(".icon-font-size-3").css({
+            "color": "var(--header-color)"
+        });
+    });
+    $(".anchor").click(function(e){
+       $('html,body').scrollTop($($(this)[0].id.replace('anchor-','#')).offset().top);
+    });
+
+    //Transitions
+
+    if ($(window).width() <= 930 && window.location.href == "https://itsthanhnguyen.github.io/") {
+        $(".card").click(function (e) {
+            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
+            $('html, body').animate({
+                scrollTop: $("#" + $(this)[0].id).offset().top
+            }, 0, function () {
+                window.location.assign(navigateTo);
+            })
+        });
+    } else {
+        $(".card > div > button").click(function (e) {
+            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
+            $('html, body').animate({
+                scrollTop: $("#" + $(this).parents().parents()[0].id).offset().top
+            }, 0, function () {
+                window.location.assign(navigateTo);
+            })
+        });
+    }
+
+    // Dark Light Modes
     if (colorScheme == 'light') {
         lightMode();
     } else {
@@ -260,4 +232,33 @@ $(document).ready(function () {
     $(".switch").click(function (e) {
         switchTheme();
     });
-});
+
+    //Scroll
+    $(".scroll-to-top").click(function (e) {
+        $('html,body').animate({ scrollTop: 0 }, 0);
+        if (!navCollapsed){
+            collapseNav()
+            navCollapsed = true;
+        }
+    });
+})
+
+// Scroll
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos < 500) {
+        $(".scroll-to-top").css({
+            "transform": "scale(0)",
+            "opacity": "0"
+        });
+    } else {
+        $(".scroll-to-top").css({
+            "transform": "scale(1)",
+            "opacity": "0.5"
+        });
+    }
+    prevScrollpos = currentScrollPos;
+}

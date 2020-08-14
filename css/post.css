@@ -66,7 +66,7 @@ nav > div > span:nth-child(n + 2) {
 	-o-transition: 0.2s all ease-in-out;
 }
 
-.navigation-flyout > ol {
+.navigation-flyout > ul {
 	width: 100vw;
 	height: 100vh;
 	display: table-cell;
@@ -80,33 +80,9 @@ nav > div > span:nth-child(n + 2) {
 	-o-transition: 0.2s all ease-in-out;
 }
 
-.navigation-flyout > ol > li {
+.navigation-flyout > ul > li {
 	text-align: left;
 	margin: 2rem;
-}
-
-.card {
-	text-align: center;
-	min-height: 30rem;
-	z-index: 2;
-	vertical-align: middle;
-	height: 100%;
-	top: 0;
-	display: table;
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
-}
-
-.card > div {
-	width: 50vw;
-	display: table-cell;
-	vertical-align: middle;
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
 }
 
 .flex {
@@ -124,9 +100,7 @@ nav > div > span:nth-child(n + 2) {
 .content-table {
 	width: 25vw;
 	padding: 3rem;
-	position: sticky;
-	position: -webkit-sticky;
-	align-self: flex-start;
+	
 	left: 0;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
@@ -149,17 +123,27 @@ nav > div > span:nth-child(n + 2) {
 	margin-top: 0;
 }
 
-.content-table > ol {
-	padding-left: 0rem;
-	list-style: none;
+.anchors {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 2rem;
+	align-self: flex-start;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
 }
 
-.content-table > ol > .hyperlink {
+.anchors > li {
+	padding-left: 1rem;
+}
+
+.anchors > .hyperlink {
 	margin: 2rem 0;
+}
+
+.anchors > .hyperlink::after {
+	margin-left: 1rem;
 }
 
 .icons {
@@ -219,14 +203,6 @@ nav > div > span:nth-child(n + 2) {
 	justify-content: space-between;
 }
 
-#cassiopeia-ct {
-	top: -25rem;
-}
-
-#hashtag-ct {
-	top: -31rem;
-}
-
 @media only screen and (max-width: 930px) {
 	section {
 		padding: 3rem 1rem;
@@ -258,10 +234,6 @@ nav > div > span:nth-child(n + 2) {
 
 	.img-quarterwidth {
 		max-width: 50vw;
-	}
-
-	#cassiopeia {
-		background-position: top right;
 	}
 
 	.prev-next-posts {
