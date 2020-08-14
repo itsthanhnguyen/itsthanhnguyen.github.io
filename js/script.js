@@ -249,7 +249,7 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 500) {
+    if (currentScrollPos < 250) {
         $(".scroll-to-top").css({
             "transform": "scale(0)",
             "opacity": "0"
