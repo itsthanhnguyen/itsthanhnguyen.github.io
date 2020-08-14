@@ -181,7 +181,7 @@ button {
 	color: var(--header-color);
 	background-color: transparent;
 	display: inline-block;
-	border-radius: 90px;
+	border-radius: 10px;
 	border: 0.1rem solid var(--grey-1);
 	padding: 1rem 1.5rem;
 	display: block;
