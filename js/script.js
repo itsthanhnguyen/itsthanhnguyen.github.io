@@ -18,7 +18,7 @@ function expandNav() {
     } else {
         $(".content-table").css({
             "transform": "translateX(0rem)",
-            "margin-left": "0"
+            "margin-right": "0"
         });
         
     }
@@ -43,8 +43,8 @@ function collapseNav() {
         })
     } else {
         $(".content-table").css({
-            "transform": "translateX(-" + $(".content-table").outerWidth(true) + "px)",
-            "margin-left": "-" + $(".content-table").outerWidth(true) + "px"
+            "transform": "translateX(" + $(".content-table").outerWidth(true) + "px)",
+            "margin-right": - $(".content-table").outerWidth(true) + "px"
         });
     }
 }
