@@ -101,9 +101,14 @@ function expandNav() {
         })
     } else {
         $(".content-table").css({
-            "transform": "translateX(0rem)",
-            "margin-right": "0"
+            "display": "block"
         });
+        setTimeout(function(){ 
+            $(".content-table").css({
+                "transform": "translateX(0rem)",
+                "margin-right": "0"
+            });
+        }, 1);
         
     }
 }
@@ -130,6 +135,12 @@ function collapseNav() {
             "transform": "translateX(" + $(".content-table").outerWidth(true) + "px)",
             "margin-right": - $(".content-table").outerWidth(true) + "px"
         });
+        setTimeout(function(){ 
+            $(".content-table").css({
+                "display": "none"
+            });
+        }, 200);
+       
     }
 }
 
@@ -236,7 +247,7 @@ $(document).ready(function () {
     //Scroll
     $(".scroll-to-top").click(function (e) {
         $('html,body').animate({ scrollTop: 0 }, 0);
-        if (!navCollapsed){
+        if (!navCollapsed && $(window).width() <= 930){
             collapseNav()
             navCollapsed = true;
         }
@@ -257,7 +268,7 @@ window.onscroll = function () {
     } else {
         $(".scroll-to-top").css({
             "transform": "scale(1)",
-            "opacity": "0.5"
+            "opacity": "1"
         });
     }
     prevScrollpos = currentScrollPos;

@@ -21,68 +21,48 @@ section {
 
 nav {
 	z-index: 10;
-	width: calc(100vw - 90px);
+	padding: 0 18px;
+	width: 270px;
 	height: auto;
 	display: flex;
 	justify-content: space-between;
-	padding: 0 45px;
-	bottom: 0;
 	position: fixed;
+	bottom: 18px;
+	left: 50%;
+    transform: translate(-50%, 0);
+	border-radius: 90px;
 	background-color: var(--nav-bg-color);
 	backdrop-filter: blur(30px) saturate(125%);
 	-webkit-backdrop-filter: blur(30px) saturate(125%);
 }
 
-nav > div > [class*="icon"] {
-	font-size: 27px;
-}
-
 nav > div > a > img {
-	width: 45px;
+	width: 36px;
 	padding: 9px 0;
 }
 
-nav > div > span {
-	color: var(--header-color);
-	padding: 18px 18px 18px 0;
+nav > div > [class*="icon"] {
+	font-size: 22.5px;
+	color: var(--grey-1);
+	padding: 18px 9px 18px 0;
 	margin-left: 0 !important;
 	cursor: pointer;
 }
 
-nav > div > span:nth-child(n + 2) {
-	padding: 18px;
+nav > div > .icon-font-size-1 {
+	color: var(--header-color);
 }
 
 .navigation-flyout {
-	position: fixed;
-	z-index: -10;
-	background-color: var(--nav-bg-color);
-	backdrop-filter: blur(30px) saturate(125%);
-	-webkit-backdrop-filter: blur(30px) saturate(125%);
-	opacity: 0;
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
+	display: none;
 }
 
-.navigation-flyout > ul {
-	width: 100vw;
-	height: 100vh;
-	display: table-cell;
-	vertical-align: middle;
-	list-style: none;
-	line-height: 5rem;
-	visibility: hidden;
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
+.icon-font-size-1 {
+	color: var(--font-color);
 }
 
-.navigation-flyout > ul > li {
-	text-align: left;
-	margin: 2rem;
+nav > div > [class*="icon"]:nth-child(n + 2) {
+	padding: 9px;
 }
 
 .flex {
@@ -99,8 +79,7 @@ nav > div > span:nth-child(n + 2) {
 
 .content-table {
 	width: 25vw;
-	padding: 3rem;
-	
+	padding: 54px;
 	left: 0;
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
@@ -124,6 +103,8 @@ nav > div > span:nth-child(n + 2) {
 }
 
 .anchors {
+	padding-left: 0;
+	margin-left: -18px;
 	position: sticky;
 	position: -webkit-sticky;
 	top: 2rem;
@@ -169,18 +150,6 @@ nav > div > span:nth-child(n + 2) {
 	margin-right: auto;
 }
 
-.scroll-to-top {
-	bottom: 5rem;
-}
-
-[class*="icon-font"] {
-	color: var(--grey-1);
-}
-
-.icon-font-size-1 {
-	color: var(--header-color);
-}
-
 .img-halfwidth {
 	display: block;
 	max-width: 50vw;
@@ -203,6 +172,10 @@ nav > div > span:nth-child(n + 2) {
 	justify-content: space-between;
 }
 
+.prev-next-posts > * {
+	font-size: 18px;
+}
+
 @media only screen and (max-width: 930px) {
 	section {
 		padding: 3rem 1rem;
@@ -214,18 +187,37 @@ nav > div > span:nth-child(n + 2) {
 		padding: 1rem;
 	}
 
-	nav {
-		padding: 0 18px;
-		width: calc(100vw - 36px);
+	.navigation-flyout {
+		display: block;
+		position: fixed;
+		z-index: -10;
+		background-color: var(--nav-bg-color);
+		backdrop-filter: blur(30px) saturate(125%);
+		-webkit-backdrop-filter: blur(30px) saturate(125%);
+		opacity: 0;
+		transition: 0.2s all ease-in-out;
+		-webkit-transition: 0.2s all ease-in-out;
+		-moz-transition: 0.2s all ease-in-out;
+		-o-transition: 0.2s all ease-in-out;
 	}
 
-	nav > div > span,
-	nav > div > span:nth-child(n + 2) {
-		padding: 18px 9px 18px 0;
+	.navigation-flyout > ul {
+		width: 100vw;
+		height: 100vh;
+		display: table-cell;
+		vertical-align: middle;
+		list-style: none;
+		line-height: 5rem;
+		visibility: hidden;
+		transition: 0.2s all ease-in-out;
+		-webkit-transition: 0.2s all ease-in-out;
+		-moz-transition: 0.2s all ease-in-out;
+		-o-transition: 0.2s all ease-in-out;
 	}
 
-	nav > div > img {
-		padding: 9px 0;
+	.navigation-flyout > ul > li {
+		text-align: left;
+		margin: 2rem;
 	}
 
 	.img-halfwidth {
@@ -261,5 +253,21 @@ nav > div > span:nth-child(n + 2) {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	nav {
+		padding: 0 36px;
+		width: calc(100vw - 72px);
+		bottom: 0;
+		border-radius: 0px;
+		background-color: var(--nav-bg-color);
+		backdrop-filter: blur(30px) saturate(125%);
+		-webkit-backdrop-filter: blur(30px) saturate(125%);
+	}
+
+	.scroll-to-top{
+		border-radius: 9px;
+		right: 18px;
+		bottom: 72px;
 	}
 }
