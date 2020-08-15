@@ -262,10 +262,16 @@ $(document).ready(function () {
 
     //Scroll
     $(".scroll-to-top").click(function (e) {
-        $('html,body').animate({ scrollTop: 0 }, 0);
-        if (!navCollapsed && $(window).width() <= 1024){
-            collapseNav()
-            navCollapsed = true;
+        if (window.location.href != "https://itsthanhnguyen.github.io/"){
+            $('html,body').animate({ scrollTop: 0 }, 0);
+            if (!navCollapsed && $(window).width() <= 1024){
+                collapseNav()
+                navCollapsed = true;
+            }
+        } else {
+            $('html, body').animate({
+                scrollTop: $("#" + $(this)[0].id).offset().top
+            }, 0);
         }
     });
 })
@@ -291,11 +297,11 @@ $(window).scroll(function () {
     } else {
         if (currentScrollPos < 250) {
             $(".scroll-to-top").css({
-                "opacity": "0.2"
+                "transform": "rotate(180deg)"
             });
         } else {
             $(".scroll-to-top").css({
-                "opacity": "1"
+                "transform": "rotate(0)"
             });
         }
     }
