@@ -43,19 +43,21 @@ section {
 
 .content {
 	margin-left: calc(50vw - 438px);
-	margin-right: calc(35vw - 438px);
+	margin-right: calc(30vw - 438px);
 	transition: 0.2s all ease-in-out;
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
 }
+
 .placeholder{
 	width: 15vw;
 	padding: 54px 54px 54px 0;
 }
+
 .content-table {
 	font-size: 16px;
-	width: 15vw;
+	width: 20vw;
 	padding: 54px 54px 54px 0;
 	left: 0;
 	transition: 0.2s all ease-in-out;
