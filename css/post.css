@@ -6,6 +6,10 @@ h2 {
 	margin: auto;
 }
 
+h4 {
+	padding-left: 2rem;
+}
+
 p {
 	padding: 0 2rem;
 	text-align: justify;
@@ -238,9 +242,8 @@ section {
 		display: none;
 	}
 
-	p {
+	p, h4 {
 		padding: 0;
-
 	}
 
 	.navigation-flyout {
