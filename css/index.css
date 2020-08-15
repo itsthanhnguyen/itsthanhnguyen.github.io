@@ -10,6 +10,13 @@
 	right: 0;
 }
 
+span{
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+}
+
 #top {
 	display: table;
 	padding-left: 25%;

@@ -276,16 +276,18 @@ var prevScrollpos = window.pageYOffset;
 
 $(window).scroll(function () {
     var currentScrollPos = window.pageYOffset;
-    if (currentScrollPos < 250) {
-        $(".scroll-to-top").css({
-            "transform": "scale(0)",
-            "opacity": "0"
-        });
-    } else {
-        $(".scroll-to-top").css({
-            "transform": "scale(1)",
-            "opacity": "1"
-        });
+    if (window.location.href != "https://itsthanhnguyen.github.io/"){
+        if (currentScrollPos < 250) {
+            $(".scroll-to-top").css({
+                "transform": "scale(0)",
+                "opacity": "0"
+            });
+        } else {
+            $(".scroll-to-top").css({
+                "transform": "scale(1)",
+                "opacity": "1"
+            });
+        }
     }
     if (currentScrollPos >= prevScrollpos){
         $(".logo").css({
