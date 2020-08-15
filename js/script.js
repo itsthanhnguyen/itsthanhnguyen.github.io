@@ -289,15 +289,17 @@ window.onscroll = function () {
     }
     if (currentScrollPos >= prevScrollpos){
         $(".logo").css({
-            "transform": "rotate(-10deg) scale(0.7)",
-            "-webkit-transform": "rotate(-10deg) scale(0.7)",
-            "opacity": "0"
+            "transform": "rotate(0deg) scale(0.9)",
+            "-webkit-transform": "rotate(0deg) scale(0.9)",
+            "opacity": "0",
+            "top": "-3rem"
         });
     } else {
         $(".logo").css({
             "transform": "rotate(4deg) scale(1)",
             "-webkit-transform": "rotate(4deg) scale(1)",
-            "opacity": "0.5"
+            "opacity": "0.5",
+            "top": "0"
         });
     }
     prevScrollpos = currentScrollPos;
