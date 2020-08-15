@@ -186,7 +186,7 @@ nav > div > a > img {
 nav > div > [class*="icon"] {
 	font-size: 22.5px;
 	color: var(--grey-1);
-	padding: 18px 9px 18px 0;
+	padding: 18px 9px;
 	margin-left: 0 !important;
 	cursor: pointer;
 }
