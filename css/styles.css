@@ -244,6 +244,17 @@ button:hover {
 	display: none;
 }
 
+.scroll-to-top {
+	transition: 0.2s all ease-in-out;	
+	-webkit-transition: 0.2s all ease-in-out;
+	-moz-transition: 0.2s all ease-in-out;
+	-o-transition: 0.2s all ease-in-out;
+	transform-origin: center;
+	-webkit-transform-origin: center;
+	-moz-transform-origin: center;
+	-o-transform-origin: center;
+}
+
 .logo {
 	position: fixed;
 	top: 0;
