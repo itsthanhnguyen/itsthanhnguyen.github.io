@@ -264,14 +264,18 @@ $(document).ready(function () {
     $(".scroll-to-top").click(function (e) {
         if (window.location.href != "https://itsthanhnguyen.github.io/"){
             $('html,body').animate({ scrollTop: 0 }, 0);
-            if (!navCollapsed && $(window).width() <= 1024){
-                collapseNav()
-                navCollapsed = true;
-            }
         } else {
-            $('html, body').animate({
-                scrollTop: $("#cassiopeia").offset().top
-            }, 0);
+            if (window.pageYOffset < 250) {
+                $('html, body').animate({
+                    scrollTop: $("#cassiopeia").offset().top
+                }, 0);
+            } else {
+                $('html,body').animate({ scrollTop: 0 }, 0);
+            }
+        }
+        if (!navCollapsed && $(window).width() <= 1024){
+            collapseNav()
+            navCollapsed = true;
         }
     });
 })
