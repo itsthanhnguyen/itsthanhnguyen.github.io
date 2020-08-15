@@ -83,7 +83,7 @@ function lightMode() {
 }
 
 function expandNav() {
-    if ($(window).width() <= 930) {
+    if ($(window).width() <= 1024) {
         $(".navigation-flyout > ul").css({
             "visibility": "visible"
         });
@@ -114,7 +114,7 @@ function expandNav() {
 }
 
 function collapseNav() {
-    if ($(window).width() <= 930) {
+    if ($(window).width() <= 1024) {
         $(".navigation-flyout > ul").css({
             "visibility": "hidden"
         });
@@ -145,7 +145,7 @@ function collapseNav() {
 }
 
 $(document).ready(function () {
-    if ($(window).width() <= 930) {
+    if ($(window).width() <= 1024) {
         var navCollapsed = true;
     } else {
         var navCollapsed = false;
@@ -214,7 +214,7 @@ $(document).ready(function () {
 
     //Transitions
 
-    if ($(window).width() <= 930 && window.location.href == "https://itsthanhnguyen.github.io/") {
+    if ($(window).width() <= 1024 && window.location.href == "https://itsthanhnguyen.github.io/") {
         $(".card").click(function (e) {
             var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
             $('html, body').animate({
@@ -263,7 +263,7 @@ $(document).ready(function () {
     //Scroll
     $(".scroll-to-top").click(function (e) {
         $('html,body').animate({ scrollTop: 0 }, 0);
-        if (!navCollapsed && $(window).width() <= 930){
+        if (!navCollapsed && $(window).width() <= 1024){
             collapseNav()
             navCollapsed = true;
         }
