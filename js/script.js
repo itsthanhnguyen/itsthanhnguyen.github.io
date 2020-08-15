@@ -270,7 +270,7 @@ $(document).ready(function () {
             }
         } else {
             $('html, body').animate({
-                scrollTop: $("#" + $(this)[0].id).offset().top
+                scrollTop: $("#cassiopeia").offset().top
             }, 0);
         }
     });
