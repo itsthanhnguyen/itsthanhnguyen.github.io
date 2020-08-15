@@ -288,6 +288,16 @@ $(window).scroll(function () {
                 "opacity": "1"
             });
         }
+    } else {
+        if (currentScrollPos < 250) {
+            $(".scroll-to-top").css({
+                "opacity": "0.2"
+            });
+        } else {
+            $(".scroll-to-top").css({
+                "opacity": "1"
+            });
+        }
     }
     if (currentScrollPos >= prevScrollpos){
         $(".logo").css({
