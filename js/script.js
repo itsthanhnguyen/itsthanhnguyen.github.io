@@ -271,10 +271,10 @@ $(document).ready(function () {
 })
 
 // Scroll
-
 var prevScrollpos = window.pageYOffset;
 
-window.onscroll = function () {
+
+$(window).scroll(function () {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos < 250) {
         $(".scroll-to-top").css({
@@ -302,5 +302,11 @@ window.onscroll = function () {
             "top": "0"
         });
     }
+    $("section").each(function(index, element){
+        if (element.offsetTop - 50 < currentScrollPos){           
+            $('.anchor').removeClass("current-section");
+            $(".anchors > #anchor-" + element.id).addClass("current-section");
+        }
+    });
     prevScrollpos = currentScrollPos;
-}
+});

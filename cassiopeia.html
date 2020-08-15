@@ -30,7 +30,7 @@
         <div>
             <span class="switch"></span>
         </div>
-        
+
         <div>
             <span class="icon-font-size-1"></span>
             <span class="icon-font-size-2"></span>
@@ -39,7 +39,7 @@
         <div>
             <span class="icon-format_list_numbered"></span>
         </div>
-        
+
     </nav>
     <div>
         <a href="./"><img src="images/logo.svg" alt="My Logo" class="logo"></a>
@@ -70,7 +70,7 @@
         </div>
         <div class="desktop"></div>
     </div>
-    
+
     <div class="flex">
         <div class="content">
             <section id="development-process">
@@ -89,21 +89,21 @@
                     <div>
                         <div>
                             <picture id="cassiopeia_constraints_small"></picture>
-                            <h4>Small-Sized Habitat</h4>
+                            <p>Small-Sized Habitat</p>
                         </div>
                         <div>
                             <picture id="cassiopeia_constraints_slow"></picture>
-                            <h4>Slow Internet Connection</h4>
+                            <p>Slow Internet Connection</h4>
                         </div>
                     </div>
                     <div>
                         <div>
                             <picture id="cassiopeia_constraints_sad"></picture>
-                            <h4>Pronity to Mental Distress</h4>
+                            <p>Pronity to Mental Distress</p>
                         </div>
                         <div>
                             <picture id="cassiopeia_constraints_lab"></picture>
-                            <h4>Complex Laboratory Tasks</h4>
+                            <p>Complex Laboratory Tasks</p>
                         </div>
                     </div>
                 </div>
@@ -111,25 +111,25 @@
             <hr>
             <section id="core-user-needs">
                 <h2>Core User Needs</h2>
-                <h3>Assistance with Laboratory Tasks</h3>
+                <h4>Assistance with Laboratory Tasks</h4>
                 <p>Conducting scientific experiments is a huge part of the mission. Life inside the habitat is
                     constrained enough without the frustrations from those laboratorial tasks, so the crew is in need of
                     an effective lab assistant which is smart enough to not perturb them.</p>
-                <h3>Hands-Free Interaction</h3>
+                <h4>Hands-Free Interaction</h4>
                 <p>Lab experiments can escalate quickly, requiring a scientist to intensively use both of his hands to
                     handle it. In such cases, both paper-based and digital guidebooks don’t seem to help much as the
                     scientist can’t pause an on-going experiment to look up the instruction. Hands-free interaction is
                     an important feature while the user’s hands are busy.</p>
-                <h3>Decentralization</h3>
+                <h4>Decentralization</h4>
                 <p>There is an internet connection in the habitat, but the latency is bizarre! Theoretically, if one
                     needs to send a message from Mars to Earth, it will take approximately 20 minutes for the message to
                     reach the destination and vice-versa. In this case, the system needs to work offline or with an
                     unstable internet connection.</p>
-                <h3>Intuitiveness</h3>
+                <h4>Intuitiveness</h4>
                 <p>Because the crew is physically and virtually isolated from the rest of the world, they need to figure
                     out themselves how to use the system and how to fix it once it goes wrong. Therefore, intuitiveness
                     becomes one of the utmost important requirements of the system.</p>
-                <h3>Compact Size</h3>
+                <h4>Compact Size</h4>
                 <p>It’s not that spacious inside the habitat! The crew shared a story of them keeping playing with the
                     same board-games over and over because they couldn’t manage to bring more to the habitat. As a
                     result, the system needs to be compact and we should prioritize utilization of available devices in
@@ -144,7 +144,8 @@
                 <p>The defined system comprises 4 vital components: the speech recognition module, the command execution
                     module, the text-to-speech module, and the graphical user interface.</p>
                 <picture id="cassiopeia_system-architecture"></picture>
-                <p>Central to our system is <b>SNIPS</b> – a freemium AI-powered on-device speech recognition service (now
+                <p>Central to our system is <b>SNIPS</b> – a freemium AI-powered on-device speech recognition service
+                    (now
                     acquired by Sonos). This module requires some prior training to recognize what’s been said and its
                     intentions, then triggers one or more applets (within the command execution module) mapped to those
                     intentions.</p>
@@ -154,10 +155,10 @@
                 <p>As we tested the system, we discovered that SNIPS did a good job in recognizing phonology (sound of
                     the message), syntaxes (structure of the message), and semantics (logical meanings the message,
                     regardless of context), but it didn’t show much supports in pragmatics (contextual meanings of the
-                    message). 
+                    message).
                 <blockquote>For example, by saying “I’m done” at the first step of an experiment, the crew members
                     intend to go on to the second step; however, at the end of an experiment, that could mean that they
-                    want to successfully wrap up the experiment. </blockquote> 
+                    want to successfully wrap up the experiment. </blockquote>
                 <p>Having discovered that, we separated the user flow into
                     states, developed a state-machine accordingly, and applied it to the applets, so that SNIPS
                     “understands” the real intention of a command based on the context.</p>
@@ -250,26 +251,25 @@
             <hr>
             <section id="key-takeaways">
                 <h2>Key Takeaways</h2>
-                <p>We carried out a between-subject user study inside the lab module at MaMBA with English-speaking
-                    participants experienced in labworks. All of them have heard of Google Assistant or Amazon Alexa,
-                    yet only a quarter of them had much experience with such technology. The participants were randomly
-                    assigned into two groups to perform the same lab experiment procedure, one with and the other
-                    without the GUI. We utilized SUS/PSSUQ questionnaires and conducted an interview with them
-                    afterwards to analyze the usability of the system. Here are what we found out from the usability
-                    test:</p>
-                <h3>Multimodality Enhances Efficiency and Learnability</h3>
+                <p>We carried out a between-subject user study inside the lab module at MaMBA with
+                    English-speaking
+                    participants experienced in lab works. All of them have heard of Google Assistant or Amazon Alexa,
+                    yet only 25% had experience with such technology. We utilized SUS/PSSUQ questionnaires and conducted
+                    an interview with them
+                    afterwards to analyze the usability of the system.</p>
+                <h4>Multimodality Enhances Efficiency and Learnability</h4>
                 <p>The complementary GUI became handy when it comes to long-to-very-long message transmission.
                     Participants interacting with the hybrid system (with the GUI) didn’t need to ask the system to
                     repeat the message that much in comparison to the pure conversational system, hence spent less time
                     finishing the lab procedure. We also found out that inexperienced participants get started quicker
                     when using the hybrid system.</p>
-                <h3>Front-Facing Output Is Preferred</h3>
+                <h4>Front-Facing Output Is Preferred</h4>
                 <p>All participants seemed to turn towards the display/audio source while interacting with the system
                     even though it’s technically okay to do otherwise. They shared that they prefer front-facing audio
                     and graphical output or, at least, the display should be directly in front of them when they do the
                     job. This shows their habits while communicating–regardless of with whom–and a slight dependency on
                     the graphical interface.</p>
-                <h3>Audio Quality Is Important</h3>
+                <h4>Audio Quality Is Important</h4>
                 <p>In the case of a voice assistant, the voice of the text-to-speech engine and the quality of the
                     speaker play a big role in determining user experience (similar to the case of devices with a
                     display where UI design and the quality of the display are important). This includes the pace of the
@@ -278,24 +278,25 @@
         </div>
         <div class="content-table desktop">
             <div>
-                <h4>tl;dr:</h4>
+                <h4>tl;dr</h4>
                 <p>We designed and developed Cassiopeia – an intelligent lab assistant for extraterrestrial missions.
                 </p>
             </div>
             <div>
-                <h4>Roles:</h4>
-                <p>UI & UX Designer</p>
+                <h4>Roles</h4>
+                <p>UI/UX Designer</p>
                 <p>Middleware & Back-end Developer</p>
                 <p>Project Co-Manager</p>
             </div>
             <ul class="anchors">
-                <li class="hyperlink anchor" id="anchor-development-process">Dev. Process</li>
-                <li class="hyperlink anchor" id="anchor-problem-statement">Problem Statement</li>
-                <li class="hyperlink anchor" id="anchor-core-user-needs">Core User Needs</li>
-                <li class="hyperlink anchor" id="anchor-system-design">System Design</li>
-                <li class="hyperlink anchor" id="anchor-user-flow">User Flow</li>
-                <li class="hyperlink anchor" id="anchor-interface-design">Interface Design</li>
-                <li class="hyperlink anchor" id="anchor-key-takeaways">Key Takeaways</li>
+                <h4>Contents</h4>
+                <li class="anchor" id="anchor-development-process">Dev. Process</li>
+                <li class="anchor" id="anchor-problem-statement">Problem Statement</li>
+                <li class="anchor" id="anchor-core-user-needs">Core User Needs</li>
+                <li class="anchor" id="anchor-system-design">System Design</li>
+                <li class="anchor" id="anchor-user-flow">User Flow</li>
+                <li class="anchor" id="anchor-interface-design">Interface Design</li>
+                <li class="anchor" id="anchor-key-takeaways">Key Takeaways</li>
             </ul>
         </div>
     </div>
