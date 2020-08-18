@@ -52,7 +52,8 @@ function darkMode() {
     $("#hashtag_design-process").html("<source srcset='images/hashtag_design-process-dark.webp' type='image/webp'> <source srcset='images/hashtag_design-process-dark.png' type='image/png'> <img src='images/hashtag_design-process-dark.png' alt='Development Process'></img>");
     $("#hashtag_algorithm").html("<source srcset='images/hashtag_algorithm-dark.webp' type='image/webp'> <source srcset='images/hashtag_algorithm-dark.png' type='image/png'> <img src='images/hashtag_algorithm-dark.png' alt='Algorithm'>");
     $("#hashtag_system-architecture").html("<source srcset='images/hashtag_system-architecture-dark.webp' type='image/webp'> <source srcset='images/hashtag_system-architecture-dark.png' type='image/png'> <img src='images/hashtag_system-architecture-dark.png' alt='System Architecture'>");
-
+    
+    $("#cassiopeia_design-process").html("<source srcset='images/cassiopeia_design-process-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_design-process-dark.png' type='image/png'> <img src='images/cassiopeia_design-process-dark.png' alt='Development Process'></img>");
     $("#cassiopeia_constraints_small").html("<source srcset='images/cassiopeia_constraints_small-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_small-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_small-dark.png' alt='Small-Sized Habitat'></img>");
     $("#cassiopeia_constraints_slow").html("<source srcset='images/cassiopeia_constraints_slow-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_slow-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_slow-dark.png' alt='Slow Internet Connection'>");
     $("#cassiopeia_constraints_sad").html("<source srcset='images/cassiopeia_constraints_sad-dark.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_sad-dark.png' type='image/png'> <img src='images/cassiopeia_constraints_sad-dark.png' alt='Pronity to Mental Distress'>");
@@ -73,7 +74,8 @@ function lightMode() {
     $("#hashtag_design-process").html("<source srcset='images/hashtag_design-process.webp' type='image/webp'> <source srcset='images/hashtag_design-process.png' type='image/png'> <img src='images/hashtag_design-process.png' alt='Development Process'></img>");
     $("#hashtag_algorithm").html("<source srcset='images/hashtag_algorithm.webp' type='image/webp'> <source srcset='images/hashtag_algorithm.png' type='image/png'> <img src='images/hashtag_algorithm.png' alt='Algorithm'>");
     $("#hashtag_system-architecture").html("<source srcset='images/hashtag_system-architecture.webp' type='image/webp'> <source srcset='images/hashtag_system-architecture.png' type='image/png'> <img src='images/hashtag_system-architecture.png' alt='System Architecture'>");
-
+   
+    $("#cassiopeia_design-process").html("<source srcset='images/cassiopeia_design-process.webp' type='image/webp'> <source srcset='images/cassiopeia_design-process.png' type='image/png'> <img src='images/cassiopeia_design-process.png' alt='Development Process'></img>");
     $("#cassiopeia_constraints_small").html("<source srcset='images/cassiopeia_constraints_small.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_small.png' type='image/png'> <img src='images/cassiopeia_constraints_small.png' alt='Small-Sized Habitat'></img>");
     $("#cassiopeia_constraints_slow").html("<source srcset='images/cassiopeia_constraints_slow.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_slow.png' type='image/png'> <img src='images/cassiopeia_constraints_slow.png' alt='Slow Internet Connection'>");
     $("#cassiopeia_constraints_sad").html("<source srcset='images/cassiopeia_constraints_sad.webp' type='image/webp'> <source srcset='images/cassiopeia_constraints_sad.png' type='image/png'> <img src='images/cassiopeia_constraints_sad.png' alt='Pronity to Mental Distress'>");
@@ -246,17 +248,15 @@ $(document).ready(function () {
 
     //Logo
 
-    $(".logo").hover(function(){
-        $(this).css({
-            "transform": "rotate(0deg) scale(1)",
-            "-webkit-transform": "rotate(0deg) scale(1)",
-            "opacity": "1"
+    $(".home").hover(function(){
+        $(".home > a").css({
+            "font-size": "18px",
+            "color": "var(--header-color)"
         });
     }, function(){
-        $(this).css({
-            "transform": "rotate(4deg) scale(1)",
-            "-webkit-transform": "rotate(4deg) scale(1)",
-            "opacity": "0.5"
+        $(".home > a").css({
+            "font-size": "16px",
+            "color": "var(--grey-1)"
         });
     });
 
@@ -310,18 +310,18 @@ $(window).scroll(function () {
         }
     }
     if (currentScrollPos >= prevScrollpos){
-        $(".logo").css({
-            "transform": "rotate(0deg) scale(0.9)",
-            "-webkit-transform": "rotate(0deg) scale(0.9)",
+        $(".home").css({
+            "transform": "scale(0.9)",
+            "-webkit-transform": "scale(0.9)",
             "opacity": "0",
-            "top": "-3rem"
+            "top": "-4rem"
         });
     } else {
-        $(".logo").css({
-            "transform": "rotate(4deg) scale(1)",
-            "-webkit-transform": "rotate(4deg) scale(1)",
-            "opacity": "0.5",
-            "top": "0"
+        $(".home").css({
+            "transform": "scale(1)",
+            "-webkit-transform": "scale(1)",
+            "opacity": "1",
+            "top": "27px"
         });
     }
     $("section").each(function(index, element){

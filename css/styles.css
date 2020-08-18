@@ -7,7 +7,6 @@
 	--header-color: #363537;
 	--font-color: #646464;
 	--bg-color: #fbfbfb;
-	--logo-color: ;
 	--nav-bg-color: rgba(240, 240, 240, 0.75);
 	--grey-1: #bebebe;
 	--grey-2: #f5f5f5;
@@ -33,7 +32,6 @@
 	--blue: #1b98e0;
 	--indigo: #6d466b;
 	--header-color: #fbfbfb;
-	--font-color: #aaaaaa;
 	--bg-color: rgb(21, 21, 21);
 	--logo-color: invert(99%) sepia(96%) saturate(0%) hue-rotate(104deg);
 	--nav-bg-color: rgba(21, 21, 21, 0.75);
@@ -254,25 +252,6 @@ button:hover {
 	-moz-transform-origin: center;
 	-o-transform-origin: center;
 }
-
-.logo {
-	position: fixed;
-	top: 0;
-	left: 27px;
-	width: 4rem;
-	opacity: 0.5;
-	transform: rotate(4deg);
-	transition: 0.2s all ease-in-out;
-	-webkit-transition: 0.2s all ease-in-out;
-	-moz-transition: 0.2s all ease-in-out;
-	-o-transition: 0.2s all ease-in-out;
-}
-
-.logo:hover {
-	transform: scale(1.05) rotate(0);
-	opacity: 1;
-}
-
 .hyperlink,
 .hyperlink-2 {
 	font-family: "Jost", sans-serif;
@@ -373,11 +352,6 @@ button:hover {
 	-webkit-transition: 0.2s all ease-in-out;
 	-moz-transition: 0.2s all ease-in-out;
 	-o-transition: 0.2s all ease-in-out;
-}
-
-.logo {
-	filter: var(--logo-color);
-	-webkit-filter: var(--logo-color);
 }
 
 .no-webp #cassiopeia {
