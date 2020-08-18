@@ -156,8 +156,12 @@ section {
 
 .icons > div > div {
 	max-width: 10rem;
-	text-align: center;
 	margin: 0 auto;
+}
+
+.icons > div > div > p {
+	text-align: center;
+	padding: 0;
 }
 
 .colored-icon {
