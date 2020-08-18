@@ -260,12 +260,14 @@ $(document).ready(function () {
         });
     });
 
+
     //Scroll
     $(".scroll-to-top").click(function (e) {
         if (window.location.href != "https://itsthanhnguyen.github.io/"){
             $('html,body').animate({ scrollTop: 0 }, 0);
         } else {
-            if (window.pageYOffset < 550) {
+            console.log(window.pageYOffset);
+            if (window.pageYOffset < 1000) {
                 $('html, body').animate({
                     scrollTop: $("#cassiopeia").offset().top
                 }, 0);
@@ -287,7 +289,7 @@ var prevScrollpos = window.pageYOffset;
 $(window).scroll(function () {
     var currentScrollPos = window.pageYOffset;
     if (window.location.href != "https://itsthanhnguyen.github.io/"){
-        if (currentScrollPos < 250) {
+        if (currentScrollPos < 1000) {
             $(".scroll-to-top").css({
                 "transform": "scale(0)",
                 "opacity": "0"
@@ -299,7 +301,7 @@ $(window).scroll(function () {
             });
         }
     } else {
-        if (currentScrollPos < 250) {
+        if (currentScrollPos < 1000) {
             $(".scroll-to-top").css({
                 "transform": "rotate(180deg)"
             });
