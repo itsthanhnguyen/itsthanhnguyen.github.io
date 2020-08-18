@@ -67,6 +67,11 @@ span{
 	background-position: center;
 }
 
+.scroll-to-top {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
 @media only screen and (max-width: 1024px) {
 	footer {
 		padding: 0 1rem;

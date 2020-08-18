@@ -265,7 +265,7 @@ $(document).ready(function () {
         if (window.location.href != "https://itsthanhnguyen.github.io/"){
             $('html,body').animate({ scrollTop: 0 }, 0);
         } else {
-            if (window.pageYOffset < 250) {
+            if (window.pageYOffset < 550) {
                 $('html, body').animate({
                     scrollTop: $("#cassiopeia").offset().top
                 }, 0);
@@ -317,12 +317,21 @@ $(window).scroll(function () {
             "top": "-4rem"
         });
     } else {
-        $(".home").css({
-            "transform": "scale(1)",
-            "-webkit-transform": "scale(1)",
-            "opacity": "1",
-            "top": "27px"
-        });
+        if ($(window).width() <= 1024) {
+            $(".home").css({
+                "transform": "scale(1)",
+                "-webkit-transform": "scale(1)",
+                "opacity": "1",
+                "top": "18px"
+            });
+        } else {
+            $(".home").css({
+                "transform": "scale(1)",
+                "-webkit-transform": "scale(1)",
+                "opacity": "1",
+                "top": "27px"
+            });
+        }
     }
     $("section").each(function(index, element){
         if (element.offsetTop - 50 < currentScrollPos){           
