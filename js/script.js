@@ -289,7 +289,7 @@ var prevScrollpos = window.pageYOffset;
 $(window).scroll(function () {
     var currentScrollPos = window.pageYOffset;
     if (window.location.href != "https://itsthanhnguyen.github.io/"){
-        if (currentScrollPos < 1000) {
+        if (currentScrollPos < $("#projects")[0].offsetTop) {
             $(".scroll-to-top").css({
                 "transform": "scale(0)",
                 "opacity": "0"
@@ -301,7 +301,7 @@ $(window).scroll(function () {
             });
         }
     } else {
-        if (currentScrollPos < 1000) {
+        if (currentScrollPos < $("#projects")[0].offsetTop)  {
             $(".scroll-to-top").css({
                 "transform": "rotate(180deg)"
             });
