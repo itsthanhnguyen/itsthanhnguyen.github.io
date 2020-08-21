@@ -236,7 +236,7 @@ section {
 
 .home {
 	position: fixed;
-	top: 18px;
+	top: -54px;
 	left: 18px;
 	z-index: 10;
 	padding: 13.5px 18px;

@@ -10,12 +10,14 @@
 	--nav-bg-color: rgba(240, 240, 240, 0.75);
 	--grey-1: #bebebe;
 	--grey-2: #f5f5f5;
+	--openea: url("../images/openea_featured-image.png");
 	--cassiopeia: url("../images/cassiopeia_featured-image.jpg");
 	--hashtag: url("../images/hashtag_featured-image.jpg");
 	--gtr: url("../images/gtr_featured-image.jpg");
 	--cxtt: url("../images/cxtt_featured-image.jpg");
 	--background: url("../images/background.png");
 	--me: url("../images/thanh-nguyen.jpg");
+	--openea-webp: url("../images/openea_featured-image.webp");
 	--cassiopeia-webp: url("../images/cassiopeia_featured-image.webp");
 	--hashtag-webp: url("../images/hashtag_featured-image.webp");
 	--gtr-webp: url("../images/gtr_featured-image.webp");
@@ -38,12 +40,14 @@
 	--nav-bg-color: rgba(21, 21, 21, 0.75);
 	--grey-1: #5b5b5b;
 	--grey-2: #c5cbd3;
+	--openea: url("../images/openea_featured-image-dark.png");
 	--cassiopeia: url("../images/cassiopeia_featured-image-dark.jpg");
 	--hashtag: url("../images/hashtag_featured-image-dark.jpg");
 	--gtr: url("../images/gtr_featured-image-dark.jpg");
 	--cxtt: url("../images/cxtt_featured-image-dark.jpg");
 	--background: url("../images/background-dark.png");
 	--me: url("../images/thanh-nguyen-dark.jpg");
+	--openea-webp: url("../images/openea_featured-image-dark.webp");
 	--cassiopeia-webp: url("../images/cassiopeia_featured-image-dark.webp");
 	--hashtag-webp: url("../images/hashtag_featured-image-dark.webp");
 	--gtr-webp: url("../images/gtr_featured-image-dark.webp");
@@ -124,6 +128,10 @@ hr {
 	border: 1px solid var(--font-color);
 	margin: 0 48px;
 	opacity: 0.1;
+}
+
+.mobile {
+	display: none;
 }
 
 .flex {
@@ -232,7 +240,12 @@ button {
 	-o-transition: 0.2s all ease-in-out;
 }
 
-button:hover {
+button:disabled{
+	opacity: 0.25;
+	cursor: default;
+}
+
+button:hover:enabled {
 	transform: scale(1.15);
 	-webkit-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.15);
 	-moz-box-shadow: 0px 0px 21px 2px rgba(0, 0, 0, 0.15);
@@ -254,7 +267,8 @@ button:hover {
 	-o-transform-origin: center;
 }
 .hyperlink,
-.hyperlink-2 {
+.hyperlink-2, 
+.hyperlink-disabled {
 	font-family: "Jost", sans-serif;
 	font-size: 1rem;
 	font-weight: 600;
@@ -355,6 +369,12 @@ button:hover {
 	-o-transition: 0.2s all ease-in-out;
 }
 
+.no-webp #openea {
+	background: var(--openea);
+	background-size: cover;
+	background-position: center center;
+}
+
 .no-webp #cassiopeia {
 	background: var(--cassiopeia);
 	background-size: cover;
@@ -375,6 +395,12 @@ button:hover {
 
 .no-webp #cxtt {
 	background: var(--cxtt);
+	background-size: cover;
+	background-position: center center;
+}
+
+.webp #openea {
+	background: var(--openea-webp);
 	background-size: cover;
 	background-position: center center;
 }
@@ -403,12 +429,7 @@ button:hover {
 	background-position: center center;
 }
 
-
 @media only screen and (max-width: 768px) {
-	.desktop {
-		display: none !important;
-	}
-
 	h2 {
 		font-size: 1.75rem;
 	}
@@ -438,9 +459,7 @@ button:hover {
 		backdrop-filter: blur(30px) saturate(125%);
 		-webkit-backdrop-filter: blur(30px) saturate(125%);
 	}
-}
 
-@media only screen and (max-width: 1024px) {
 	hr {
 		border: 1px solid var(--font-color);
 		margin: 0 1rem;
@@ -450,8 +469,10 @@ button:hover {
 	.mobile {
 		display: inline;
 	}
-
-
+	.desktop {
+		display: none !important;
+	}
+	
 	.switch {
 		top: 1.5rem;
 	}
@@ -465,10 +486,6 @@ button:hover {
 		width: 100vw;
 		vertical-align: bottom !important;
 		padding: 1rem;
-	}
-
-	.card > div > br {
-		display: none;
 	}
 
 	.card > div > h2 {
@@ -493,6 +510,22 @@ button:hover {
 
 	.icon-dribbble {
 		margin-left: 0;
+	}
+
+
+	.hyperlink-disabled{
+		font-size: 0.75rem
+	}
+
+	.no-webp #openea {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--openea);
+		background-size: cover;
+		background-position: center center;
 	}
 
 	.no-webp #cassiopeia {
@@ -535,6 +568,17 @@ button:hover {
 				rgba(0, 0, 0, 0) 50%
 			),
 			var(--cxtt);
+		background-size: cover;
+		background-position: center center;
+	}
+
+	webp #openea {
+		background: linear-gradient(
+				0deg,
+				var(--nav-bg-color) 0%,
+				rgba(0, 0, 0, 0) 50%
+			),
+			var(--openea-webp);
 		background-size: cover;
 		background-position: center center;
 	}
@@ -588,9 +632,21 @@ button:hover {
 		text-align: left;
 	}
 
+	#cassiopeia > div > button,
+	#gtr > div > button {
+		margin-left: 0;
+	}
+
+	#openea > div,
 	#hashtag > div,
 	#cxtt > div {
 		text-align: right;
+	}
+
+	#openea > div > button,
+	#hashtag > div > button,
+	#cxtt > div > button {
+		margin-right: 0;
 	}
 }
 

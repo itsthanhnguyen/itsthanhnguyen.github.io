@@ -216,24 +216,33 @@ $(document).ready(function () {
 
     //Transitions
 
-    if ($(window).width() <= 1024 && (window.location.href == "https://itsthanhnguyen.github.io/" | window.location.href.includes("itsthanhnguyen.github.io/index.html"))) {
+    if ($(window).width() <= 768 && (window.location.href == "https://itsthanhnguyen.github.io/" | window.location.href.includes("itsthanhnguyen.github.io/index.html"))) {
         $(".card").click(function (e) {
-            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
-            $('html, body').animate({
-                scrollTop: $("#" + $(this)[0].id).offset().top
-            }, 0, function () {
-                window.location.assign(navigateTo);
-            })
+            if ($(this)[0].id != "openea") {
+                var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
+                $('html, body').animate({
+                    scrollTop: $("#" + $(this)[0].id).offset().top
+                }, 0, function () {
+                    window.location.assign(navigateTo);
+                })
+            }
+            else {
+                
+            }
         });
     } else {
-        $(".card > div > button").click(function (e) {
-            var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
-            $('html, body').animate({
-                scrollTop: $("#" + $(this).parents().parents()[0].id).offset().top
-            }, 0, function () {
-                window.location.assign(navigateTo);
-            })
-        });
+        if ($(this)[0].id != "openea") {
+            $(".card > div > button").click(function (e) {
+                var navigateTo = "https://itsthanhnguyen.github.io/" + $(this).parents().parents()[0].id;
+                $('html, body').animate({
+                    scrollTop: $("#" + $(this).parents().parents()[0].id).offset().top
+                }, 0, function () {
+                    window.location.assign(navigateTo);
+                })
+            });
+        } else {
+            
+        }
     }
 
     // Dark Light Modes
