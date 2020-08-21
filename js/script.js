@@ -216,7 +216,7 @@ $(document).ready(function () {
 
     //Transitions
 
-    if ($(window).width() <= 1024 && window.location.href == "https://itsthanhnguyen.github.io/") {
+    if ($(window).width() <= 1024 && (window.location.href == "https://itsthanhnguyen.github.io/" | window.location.href.includes("itsthanhnguyen.github.io/index.html"))) {
         $(".card").click(function (e) {
             var navigateTo = "https://itsthanhnguyen.github.io/" + $(this)[0].id;
             $('html, body').animate({
@@ -263,13 +263,12 @@ $(document).ready(function () {
 
     //Scroll
     $(".scroll-to-top").click(function (e) {
-        if (window.location.href != "https://itsthanhnguyen.github.io/"){
+        if (window.location.href != "https://itsthanhnguyen.github.io/" && !window.location.href.includes("itsthanhnguyen.github.io/index.html")){
             $('html,body').animate({ scrollTop: 0 }, 0);
         } else {
-            console.log(window.pageYOffset);
             if (window.pageYOffset < 1000) {
                 $('html, body').animate({
-                    scrollTop: $("#cassiopeia").offset().top
+                    scrollTop: $("#projects").offset().top
                 }, 0);
             } else {
                 $('html,body').animate({ scrollTop: 0 }, 0);
@@ -288,8 +287,8 @@ var prevScrollpos = window.pageYOffset;
 
 $(window).scroll(function () {
     var currentScrollPos = window.pageYOffset;
-    if (window.location.href != "https://itsthanhnguyen.github.io/"){
-        if (currentScrollPos < $("#projects")[0].offsetTop) {
+    if (window.location.href != "https://itsthanhnguyen.github.io/" && !window.location.href.includes("itsthanhnguyen.github.io/index.html")){
+        if (currentScrollPos < $(".content")[0].offsetTop) {
             $(".scroll-to-top").css({
                 "transform": "scale(0)",
                 "opacity": "0"
