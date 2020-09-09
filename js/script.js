@@ -272,12 +272,12 @@ $(document).ready(function () {
 
     //Scroll
     $(".scroll-to-top").click(function (e) {
-        if (window.location.href != "https://itsthanhnguyen.github.io/" && !window.location.href.includes("itsthanhnguyen.github.io/index.html")){
+        if (window.location.href != "https://itsthanhnguyen.github.io/" && !window.location.href.includes("gtr") && !window.location.href.includes("cxtt") && !window.location.href.includes("index")){
             $('html,body').animate({ scrollTop: 0 }, 0);
         } else {
             if (window.pageYOffset < 1000) {
                 $('html, body').animate({
-                    scrollTop: $("#projects").offset().top
+                    scrollTop: $(".content").offset().top
                 }, 0);
             } else {
                 $('html,body').animate({ scrollTop: 0 }, 0);
@@ -296,7 +296,7 @@ var prevScrollpos = window.pageYOffset;
 
 $(window).scroll(function () {
     var currentScrollPos = window.pageYOffset;
-    if (window.location.href != "https://itsthanhnguyen.github.io/" && !window.location.href.includes("itsthanhnguyen.github.io/index.html")){
+    if (window.location.href != "https://itsthanhnguyen.github.io/" && !window.location.href.includes("gtr") && !window.location.href.includes("cxtt") && !window.location.href.includes("index")){
         if (currentScrollPos < $(".content")[0].offsetTop) {
             $(".scroll-to-top").css({
                 "transform": "scale(0)",
@@ -309,7 +309,7 @@ $(window).scroll(function () {
             });
         }
     } else {
-        if (currentScrollPos < $("#projects")[0].offsetTop)  {
+        if (currentScrollPos < $(".content")[0].offsetTop)  {
             $(".scroll-to-top").css({
                 "transform": "rotate(180deg)"
             });
